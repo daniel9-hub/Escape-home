@@ -8,6 +8,10 @@ size = Vector3(8.1875, 1, 10.453674)
 [sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
 size = Vector3(8.181824, 0.9946289, 10.430145)
 
+[sub_resource type="BoxMesh" id="BoxMesh_tugg1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
+
 [node name="Node3D" type="Node3D" unique_id=2043496046]
 
 [node name="floor" type="StaticBody3D" parent="." unique_id=1667584310]
@@ -21,3 +25,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34347534, -1.3932722, -2.7
 shape = SubResource("BoxShape3D_bx3dq")
 
 [node name="CharacterBody3D" parent="." unique_id=1259971802 instance=ExtResource("1_ig7tw")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=111724680]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 27.039179, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1990998456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.568531, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=52127202]
+mesh = SubResource("BoxMesh_tugg1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1411830880]
+shape = SubResource("BoxShape3D_tugg1")

@@ -15,5 +15,8 @@ shape = SubResource("CapsuleShape3D_bx3dq")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=970399137]
 mesh = SubResource("CapsuleMesh_bx3dq")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1757793269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55077004, 0)
+[node name="neck" type="Node3D" parent="." unique_id=340955982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5496216, 0)
+
+[node name="Camera3D" type="Camera3D" parent="neck" unique_id=1757793269]
+fov = 85.0

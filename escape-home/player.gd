@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
-
+@onready var neck :=$neck
+@onready var camera :=$neck/Camera3D
+@onready var player := $"."
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -16,7 +18,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -26,3 +28,18 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _input(event:InputEvent) -> void:
+	if event is InputEventMouseButton:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	elif event.is_action_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+	if Input.MOUSE_MODE_CAPTURED:
+		if event is InputEventMouseMotion:
+			player.rotate_y(-event.relative.x*0.002)
+			neck.rotate_x(-event.relative.y*0.002)
+			if neck.rotation_degrees.x > 90:
+				neck.rotation_degrees.x = 90
+			elif neck.rotation_degrees.x < -90:
+				neck.rotation_degrees.x = -90
