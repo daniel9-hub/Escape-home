@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cff3uumwsjxy5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tugg1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfkix"]
+albedo_color = Color(0.6119903, 0.26608607, 0.15427133, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
+size = Vector3(5.0646667, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5ubp"]
+albedo_color = Color(0.67058825, 0.7058824, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5ubp"]
+size = Vector3(5.0646667, 1, 1)
+
+[node name="house" type="Node3D" unique_id=363629378]
+
+[node name="floor" type="Node3D" parent="." unique_id=435932767]
+transform = Transform3D(22.853, 0, 0, 0, 0.3, 0, 0, 0, 20.548, 0, -0.65, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=125263117]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor/StaticBody3D" unique_id=1317853080]
+mesh = SubResource("BoxMesh_tugg1")
+surface_material_override/0 = SubResource("StandardMaterial3D_hfkix")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=1038656395]
+shape = SubResource("BoxShape3D_bx3dq")
+
+[node name="wall" type="Node3D" parent="." unique_id=913161265]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall" unique_id=410236153]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall/StaticBody3D" unique_id=2140135218]
+mesh = SubResource("BoxMesh_bx3dq")
+surface_material_override/0 = SubResource("StandardMaterial3D_g5ubp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D" unique_id=996345263]
+shape = SubResource("BoxShape3D_g5ubp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall/StaticBody3D" unique_id=1482573301]
+transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, 2.0343626, 2.067026, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall/StaticBody3D/StaticBody3D" unique_id=1348459558]
+mesh = SubResource("BoxMesh_bx3dq")
+surface_material_override/0 = SubResource("StandardMaterial3D_g5ubp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D/StaticBody3D" unique_id=329023009]
+shape = SubResource("BoxShape3D_g5ubp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall/StaticBody3D/StaticBody3D" unique_id=1358547958]
+transform = Transform3D(0.99999976, -3.5527137e-15, 0, 3.5527137e-15, 0.99999976, 0, 0, 0, 1, 0.039343596, -4.070528, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=1282026889]
+mesh = SubResource("BoxMesh_bx3dq")
+surface_material_override/0 = SubResource("StandardMaterial3D_g5ubp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=693410164]
+shape = SubResource("BoxShape3D_g5ubp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=315783846]
+transform = Transform3D(-4.3711374e-08, -0.99999964, 0, 0.99999964, -4.3711374e-08, 0, 0, 0, 1, -2.080167, 2.0356033, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=903042905]
+mesh = SubResource("BoxMesh_bx3dq")
+surface_material_override/0 = SubResource("StandardMaterial3D_g5ubp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=16798326]
+shape = SubResource("BoxShape3D_g5ubp")
