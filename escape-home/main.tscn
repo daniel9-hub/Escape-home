@@ -14,6 +14,9 @@ size = Vector3(8.181824, 0.9946289, 10.430145)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_h2yge"]
+font_size = 24
+
 [node name="Node3D" type="Node3D" unique_id=2043496046]
 
 [node name="floor" type="StaticBody3D" parent="." unique_id=1667584310]
@@ -47,3 +50,20 @@ shape = SubResource("BoxShape3D_tugg1")
 
 [node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=521439737]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=655627418]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1138141627]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 400.0
+offset_right = 715.0
+offset_bottom = 434.0
+text = "Press \"E\" to move couch"
+label_settings = SubResource("LabelSettings_h2yge")

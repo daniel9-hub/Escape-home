@@ -1,5 +1,6 @@
 extends CharacterBody3D
 @onready var couch = get_tree().current_scene.get_node("couch")
+@onready var couch_popup = $"../CanvasLayer/Control"
 @onready var neck :=$neck
 @onready var camera :=$neck/Camera3D
 @onready var player := $"."
@@ -49,5 +50,10 @@ func _process(_delta: float) -> void:
 		var close_object = $neck/RayCast3D.get_collider()
 		#print('touching')
 		if close_object == couch:
-			print("couch")
+			#print("couch")
+			couch_popup.visible = true
+			if Input.is_action_just_pressed("interact"):
+				print("click")
+	else:
+		couch_popup.visible = false
 		
