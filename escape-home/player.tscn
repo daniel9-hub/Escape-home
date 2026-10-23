@@ -22,3 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5496216, 0)
 
 [node name="Camera3D" type="Camera3D" parent="neck" unique_id=1757793269]
 fov = 85.0
+
+[node name="RayCast3D" type="RayCast3D" parent="neck" unique_id=920365996]
+target_position = Vector3(0, 0, -2)

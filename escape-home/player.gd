@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+@onready var couch = get_tree().current_scene.get_node("couch")
 @onready var neck :=$neck
 @onready var camera :=$neck/Camera3D
 @onready var player := $"."
@@ -43,3 +43,11 @@ func _input(event:InputEvent) -> void:
 				neck.rotation_degrees.x = 90
 			elif neck.rotation_degrees.x < -90:
 				neck.rotation_degrees.x = -90
+				
+func _process(_delta: float) -> void:
+	if $neck/RayCast3D.is_colliding():
+		var close_object = $neck/RayCast3D.get_collider()
+		#print('touching')
+		if close_object == couch:
+			print("couch")
+		

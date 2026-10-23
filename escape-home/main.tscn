@@ -45,5 +45,5 @@ shape = SubResource("BoxShape3D_tugg1")
 
 [node name="house" parent="." unique_id=363629378 instance=ExtResource("2_0xm2m")]
 
-[node name="StaticBody3D2" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
+[node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
