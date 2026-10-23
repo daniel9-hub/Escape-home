@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://house.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://couch.tscn" id="3_h2yge"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -43,3 +44,6 @@ mesh = SubResource("BoxMesh_tugg1")
 shape = SubResource("BoxShape3D_tugg1")
 
 [node name="house" parent="." unique_id=363629378 instance=ExtResource("2_0xm2m")]
+
+[node name="StaticBody3D2" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
