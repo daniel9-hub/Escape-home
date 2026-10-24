@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dn75sb16c8xe0"]
+
+[ext_resource type="ArrayMesh" uid="uid://buwohsihjenw3" path="res://book.obj" id="1_3xhk5"]
+[ext_resource type="Texture2D" uid="uid://dgtra07r0b4ie" path="res://book1.png" id="2_y75h1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y75h1"]
+albedo_texture = ExtResource("2_y75h1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y75h1"]
+size = Vector3(0.18, 0.200005, 0.02)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=2123419466]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=734769265]
+mesh = ExtResource("1_3xhk5")
+surface_material_override/0 = SubResource("StandardMaterial3D_y75h1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=641265109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09, 0.097307496, 0.005517)
+shape = SubResource("BoxShape3D_y75h1")
