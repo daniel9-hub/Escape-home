@@ -54,6 +54,9 @@ func _process(_delta: float) -> void:
 			couch_popup.visible = true
 			if Input.is_action_just_pressed("interact"):
 				print("click")
+				couch.moving = true
 	else:
 		couch_popup.visible = false
 		
+	#print(couch.get_path())
+	#print(couch.get_script())
