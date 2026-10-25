@@ -50,7 +50,7 @@ func _process(_delta: float) -> void:
 	if $neck/ShapeCast3D.is_colliding():
 		for i in range($neck/ShapeCast3D.get_collision_count()):
 			var close_object = $neck/ShapeCast3D.get_collider(i)
-			print(close_object)
+			#print(close_object)
 			#print('touching')
 			if close_object == couch:
 				#print("couch")
