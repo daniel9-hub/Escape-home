@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://couch.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://book1.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://bookshelf.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://1caypox6xhr" path="res://door.tscn" id="6_7mycd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -34,10 +35,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34347534, -1.3932722, -2.7
 shape = SubResource("BoxShape3D_bx3dq")
 
 [node name="CharacterBody3D" parent="." unique_id=1259971802 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82904017, 5.9180326)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82904017, 3.1623294)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=111724680]
-transform = Transform3D(1, 0, 0, 0, 0.51805174, 0.85534924, 0, -0.85534924, 0.51805174, 0, 11.7900505, 9.664301)
+transform = Transform3D(1, 0, 0, 0, 0.5180518, 0.8553493, 0, -0.8553493, 0.5180518, -9.483032, 3.436657, 4.551386)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1990998456]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.568531, 0)
@@ -49,6 +50,7 @@ mesh = SubResource("BoxMesh_tugg1")
 shape = SubResource("BoxShape3D_tugg1")
 
 [node name="house" parent="." unique_id=363629378 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00065645576, -0.0050403774, -0.018760026)
 
 [node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
@@ -71,7 +73,10 @@ text = "Press \"E\" to move couch"
 label_settings = SubResource("LabelSettings_h2yge")
 
 [node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4269395, -0.28904533, 4.660205)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 5.3815417, -0.28783265, 4.660205)
 
 [node name="bookshelf" parent="." unique_id=1737905346 instance=ExtResource("5_lquwl")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.39678, 0.72279, -2.0553985)
+
+[node name="door" parent="." unique_id=1111695393 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.008111477, 0.8356911, 4.828761)
