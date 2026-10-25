@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var player := $"."
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+@onready var book1 = get_tree().current_scene.get_node("book1")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -55,6 +55,10 @@ func _process(_delta: float) -> void:
 			if Input.is_action_just_pressed("interact"):
 				print("click")
 				couch.moving = true
+		elif close_object == book1:
+			if Input.is_action_just_pressed("interact"):
+				print("click")
+				book1.picked_up = true
 	else:
 		couch_popup.visible = false
 		

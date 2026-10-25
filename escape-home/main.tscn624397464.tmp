@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cb73vl88scdnc"]
+
+[ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://house.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://couch.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://book1.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://bookshelf.tscn" id="5_lquwl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
+size = Vector3(8.1875, 1, 10.453674)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
+size = Vector3(8.181824, 0.9946289, 10.430145)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tugg1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2yge"]
+font_size = 24
+
+[node name="Node3D" type="Node3D" unique_id=2043496046]
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=1667584310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=933959360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3388672, -1.396048, -2.7189026)
+mesh = SubResource("BoxMesh_bx3dq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=676870884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34347534, -1.3932722, -2.7181244)
+shape = SubResource("BoxShape3D_bx3dq")
+
+[node name="CharacterBody3D" parent="." unique_id=1259971802 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82904017, 5.9180326)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=111724680]
+transform = Transform3D(1, 0, 0, 0, 0.51805174, 0.85534924, 0, -0.85534924, 0.51805174, 0, 11.7900505, 9.664301)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1990998456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.568531, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=52127202]
+mesh = SubResource("BoxMesh_tugg1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1411830880]
+shape = SubResource("BoxShape3D_tugg1")
+
+[node name="house" parent="." unique_id=363629378 instance=ExtResource("2_0xm2m")]
+
+[node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=521439737]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=655627418]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1138141627]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 400.0
+offset_right = 715.0
+offset_bottom = 434.0
+text = "Press \"E\" to move couch"
+label_settings = SubResource("LabelSettings_h2yge")
+
+[node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4269395, -0.28904533, 4.660205)
+
+[node name="bookshelf" parent="." unique_id=1737905346 instance=ExtResource("5_lquwl")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.39678, 0.72279, -2.0553985)

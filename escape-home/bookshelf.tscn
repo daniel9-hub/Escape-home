@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cm4gjatb4h206"]
+
+[ext_resource type="ArrayMesh" uid="uid://dgu7nmf35n5bo" path="res://bookshelf1.obj" id="1_n5bub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5bub"]
+size = Vector3(0.4, 2, 1.2)
+
+[node name="bookshelf" type="StaticBody3D" unique_id=1737905346]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=580430244]
+mesh = ExtResource("1_n5bub")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1944782187]
+shape = SubResource("BoxShape3D_n5bub")

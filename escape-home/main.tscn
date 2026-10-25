@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://house.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://couch.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://book1.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://bookshelf.tscn" id="5_lquwl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -69,5 +70,8 @@ offset_bottom = 434.0
 text = "Press \"E\" to move couch"
 label_settings = SubResource("LabelSettings_h2yge")
 
-[node name="RigidBody3D" parent="." unique_id=2123419466 instance=ExtResource("4_1bvp3")]
+[node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4269395, -0.28904533, 4.660205)
+
+[node name="bookshelf" parent="." unique_id=1737905346 instance=ExtResource("5_lquwl")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.39678, 0.72279, -2.0553985)
