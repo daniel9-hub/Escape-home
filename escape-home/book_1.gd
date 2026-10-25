@@ -10,3 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if picked_up == true:
 		print("picked up")
+		visible = false
