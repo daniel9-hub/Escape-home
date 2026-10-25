@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	couch_popup.visible = false
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -46,19 +47,21 @@ func _input(event:InputEvent) -> void:
 				neck.rotation_degrees.x = -90
 				
 func _process(_delta: float) -> void:
-	if $neck/RayCast3D.is_colliding():
-		var close_object = $neck/RayCast3D.get_collider()
-		#print('touching')
-		if close_object == couch:
-			#print("couch")
-			couch_popup.visible = true
-			if Input.is_action_just_pressed("interact"):
-				print("click")
-				couch.moving = true
-		elif close_object == book1:
-			if Input.is_action_just_pressed("interact"):
-				print("click")
-				book1.picked_up = true
+	if $neck/ShapeCast3D.is_colliding():
+		for i in range($neck/ShapeCast3D.get_collision_count()):
+			var close_object = $neck/ShapeCast3D.get_collider(i)
+			print(close_object)
+			#print('touching')
+			if close_object == couch:
+				#print("couch")
+				couch_popup.visible = true
+				if Input.is_action_just_pressed("interact"):
+					print("click")
+					couch.moving = true
+			elif close_object == book1:
+				if Input.is_action_just_pressed("interact"):
+					print("click")
+					book1.picked_up = true
 	else:
 		couch_popup.visible = false
 		

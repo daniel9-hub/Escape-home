@@ -8,6 +8,9 @@ height = 1.8049316
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bx3dq"]
 height = 1.8012695
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
+size = Vector3(1, 1, 2)
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1259971802]
 script = ExtResource("1_4flbx")
 
@@ -25,3 +28,7 @@ fov = 85.0
 
 [node name="RayCast3D" type="RayCast3D" parent="neck" unique_id=920365996]
 target_position = Vector3(0, 0, -2)
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="neck" unique_id=461721505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+shape = SubResource("BoxShape3D_tugg1")
