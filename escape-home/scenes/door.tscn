@@ -6,8 +6,14 @@ size = Vector3(0.3, 2.3, 1.5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mycd"]
 albedo_color = Color(0.31920952, 0.22058019, 0.062223718, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5f452"]
+size = Vector3(0.3, 2.3, 1.5)
+
 [node name="door" type="StaticBody3D" unique_id=1111695393]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=305234652]
 mesh = SubResource("BoxMesh_bx3dq")
 surface_material_override/0 = SubResource("StandardMaterial3D_7mycd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1625774950]
+shape = SubResource("BoxShape3D_5f452")
