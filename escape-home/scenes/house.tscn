@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cff3uumwsjxy5"]
 
-[ext_resource type="ArrayMesh" uid="uid://d0ajgbjgg66u5" path="res://house.obj" id="1_hfkix"]
+[ext_resource type="ArrayMesh" uid="uid://d0ajgbjgg66u5" path="res://meshes/house.obj" id="1_d7po0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tugg1"]
 
@@ -86,7 +86,7 @@ shape = SubResource("BoxShape3D_g5ubp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1349166165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
-mesh = ExtResource("1_hfkix")
+mesh = ExtResource("1_d7po0")
 surface_material_override/0 = SubResource("StandardMaterial3D_ey8g8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=250893519]

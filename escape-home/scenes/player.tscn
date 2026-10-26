@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1yukjul3r08a"]
 
-[ext_resource type="Script" uid="uid://1ypqtxdohqw7" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://1ypqtxdohqw7" path="res://scripts/player.gd" id="1_3vyb7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bx3dq"]
 height = 1.8049316
@@ -12,7 +12,7 @@ height = 1.8012695
 size = Vector3(1, 1, 1.2)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1259971802]
-script = ExtResource("1_4flbx")
+script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=456970908]
 shape = SubResource("CapsuleShape3D_bx3dq")

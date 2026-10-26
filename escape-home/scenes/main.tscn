@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cb73vl88scdnc"]
 
-[ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://house.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://couch.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://book1.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://bookshelf.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://1caypox6xhr" path="res://door.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://scenes/player.tscn" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://scenes/house.tscn" id="2_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://scenes/couch.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://scenes/book1.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://scenes/bookshelf.tscn" id="5_choun"]
+[ext_resource type="PackedScene" uid="uid://1caypox6xhr" path="res://scenes/door.tscn" id="6_ya4ey"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -34,7 +34,7 @@ mesh = SubResource("BoxMesh_bx3dq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34347534, -1.3932722, -2.7181244)
 shape = SubResource("BoxShape3D_bx3dq")
 
-[node name="CharacterBody3D" parent="." unique_id=1259971802 instance=ExtResource("1_ig7tw")]
+[node name="CharacterBody3D" parent="." unique_id=1259971802 instance=ExtResource("1_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82904017, 3.1623294)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=111724680]
@@ -49,10 +49,10 @@ mesh = SubResource("BoxMesh_tugg1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1411830880]
 shape = SubResource("BoxShape3D_tugg1")
 
-[node name="house" parent="." unique_id=363629378 instance=ExtResource("2_0xm2m")]
+[node name="house" parent="." unique_id=363629378 instance=ExtResource("2_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00065645576, -0.0050403774, -0.018760026)
 
-[node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_h2yge")]
+[node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_tipki")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=521439737]
@@ -72,13 +72,13 @@ offset_bottom = 434.0
 text = "Press \"E\" to move couch"
 label_settings = SubResource("LabelSettings_h2yge")
 
-[node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_1bvp3")]
+[node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_85g3d")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 5.3815417, -0.28783265, 4.660205)
 
-[node name="bookshelf" parent="." unique_id=1737905346 instance=ExtResource("5_lquwl")]
+[node name="bookshelf" parent="." unique_id=1737905346 instance=ExtResource("5_choun")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.39678, 0.72279, -2.0553985)
 
-[node name="door" parent="." unique_id=1111695393 instance=ExtResource("6_7mycd")]
+[node name="door" parent="." unique_id=1111695393 instance=ExtResource("6_ya4ey")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.008111477, 0.8356911, 4.828761)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1927896783]

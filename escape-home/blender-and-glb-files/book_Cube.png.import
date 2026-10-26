@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgtra07r0b4ie"
-path.s3tc="res://.godot/imported/book1.png-7856e17275e1ab4e221ee4a2bcbb0f62.s3tc.ctex"
+uid="uid://4t6posrc4y3a"
+path.s3tc="res://.godot/imported/book_Cube.png-428c5febf65b83163c6bb9df82e76300.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8aa4836c5ba28eba906ce2532a1d49a8"
+}
 
 [deps]
 
-source_file="res://book1.png"
-dest_files=["res://.godot/imported/book1.png-7856e17275e1ab4e221ee4a2bcbb0f62.s3tc.ctex"]
+source_file="res://blender-and-glb-files/book_Cube.png"
+dest_files=["res://.godot/imported/book_Cube.png-428c5febf65b83163c6bb9df82e76300.s3tc.ctex"]
 
 [params]
 
