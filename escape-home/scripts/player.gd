@@ -67,7 +67,7 @@ func _process(_delta: float) -> void:
 			elif close_object == bookshelf:
 				if Input.is_action_just_pressed("interact") and book1.picked_up == true:
 					bookshelf_book1.visible = true
-					book1.placed = true
+					book1.placed = true 
 	else:
 		couch_popup.visible = false
 		
