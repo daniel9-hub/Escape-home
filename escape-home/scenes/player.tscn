@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://1ypqtxdohqw7" path="res://scripts/player.gd" id="1_3vyb7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bx3dq"]
+radius = 0.35
 height = 1.8049316
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bx3dq"]
+radius = 0.35
 height = 1.8012695
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
