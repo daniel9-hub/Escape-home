@@ -9,6 +9,7 @@ const JUMP_VELOCITY = 4.5
 @onready var book1 = get_tree().current_scene.get_node("book1")
 @onready var bookshelf = get_tree().current_scene.get_node("bookshelf")
 @onready var bookshelf_book1 = get_tree().current_scene.get_node("bookshelf/bookshelf_book1")
+@onready var lever = get_tree().current_scene.get_node("lever/lever_base/lever")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
