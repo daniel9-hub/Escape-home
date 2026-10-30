@@ -82,20 +82,41 @@ func _process(_delta: float) -> void:
 			if Input.is_action_just_pressed(("interact")):
 				print("lever")
 				lever.rotation.z += deg_to_rad(180)
+				if l1 == false:
+					l1 = true
+				else:
+					l1 = false
 		elif raycast_close_object == lever2:
 			if Input.is_action_just_pressed(("interact")):
 				print("lever2")
 				lever2.rotation.z += deg_to_rad(180)
+				if l2 == false:
+					l2 = true
+				else:
+					l2 = false
 		if raycast_close_object == lever3:
 			if Input.is_action_just_pressed(("interact")):
 				print("lever3")
 				lever3.rotation.z += deg_to_rad(180)
+				if l3 == false:
+					l3 = true
+				else:
+					l3 = false
 		if raycast_close_object == lever4:
 			if Input.is_action_just_pressed(("interact")):
 				print("lever4")
 				lever4.rotation.z += deg_to_rad(180)
+				if l4 == false:
+					l4 = true
+				else:
+					l4 = false
+					
 	else:
 		couch_popup.visible = false
-		
+	if l1 == true:
+		if l2 == false:
+			if l3 == true:
+				if l4 == false:
+					print("open")
 	#print(couch.get_path())
 	#print(couch.get_script())
