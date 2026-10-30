@@ -9,7 +9,7 @@
 albedo_texture = ExtResource("3_1kj1s")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uavd"]
-size = Vector3(0.05, 0.277241, 0.203785)
+size = Vector3(0.19954224, 0.277241, 0.203785)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kj1s"]
 albedo_texture = ExtResource("2_soi7j")
@@ -23,7 +23,7 @@ mesh = ExtResource("1_7uavd")
 surface_material_override/0 = SubResource("StandardMaterial3D_soi7j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="lever" unique_id=179629836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0893265, 0.0938925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04915e-06, 0.0893265, 0.0938925)
 shape = SubResource("BoxShape3D_7uavd")
 
 [node name="lever_base" type="MeshInstance3D" parent="." unique_id=2006853752]

@@ -56,7 +56,7 @@ mesh = SubResource("BoxMesh_tugg1")
 shape = SubResource("BoxShape3D_tugg1")
 
 [node name="house" parent="." unique_id=363629378 instance=ExtResource("2_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00065645576, -0.0050403774, -0.018760026)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009409815, -0.045242995, 0.020547807)
 
 [node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_tipki")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
@@ -106,4 +106,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98189163, -0.0032348633, 5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7294064, -0.0032348633, 0.31250048)
 
 [node name="lever" parent="." unique_id=1108222364 instance=ExtResource("9_85g3d")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.811527, 0.65404284, -2.0466976)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.827786, 1.1861124, -2.2243862)
+
+[node name="lever2" parent="." unique_id=1153379599 instance=ExtResource("9_85g3d")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 7.8235245, 1.1903284, -1.7790223)
+
+[node name="lever3" parent="." unique_id=1003309401 instance=ExtResource("9_85g3d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.82295, 0.48691213, -2.2297244)
+
+[node name="lever4" parent="." unique_id=1332453241 instance=ExtResource("9_85g3d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.8220544, 0.48778975, -1.7892238)

@@ -10,6 +10,13 @@ const JUMP_VELOCITY = 4.5
 @onready var bookshelf = get_tree().current_scene.get_node("bookshelf")
 @onready var bookshelf_book1 = get_tree().current_scene.get_node("bookshelf/bookshelf_book1")
 @onready var lever = get_tree().current_scene.get_node("lever/lever")
+@onready var lever2 = get_tree().current_scene.get_node("lever2/lever")
+@onready var lever3 = get_tree().current_scene.get_node("lever3/lever")
+@onready var lever4 = get_tree().current_scene.get_node("lever4/lever")
+var l1 = false
+var l2 = false
+var l3 = false
+var l4 = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -69,10 +76,24 @@ func _process(_delta: float) -> void:
 				if Input.is_action_just_pressed("interact") and book1.picked_up == true:
 					bookshelf_book1.visible = true
 					book1.placed = true 
-			elif close_object == lever:
-				if Input.is_action_just_pressed(("interact")):
-					print("lever")
-					lever.rotation.z += deg_to_rad(180)
+	if $neck/RayCast3D.is_colliding():
+		var raycast_close_object = $neck/RayCast3D.get_collider()
+		if raycast_close_object == lever:
+			if Input.is_action_just_pressed(("interact")):
+				print("lever")
+				lever.rotation.z += deg_to_rad(180)
+		elif raycast_close_object == lever2:
+			if Input.is_action_just_pressed(("interact")):
+				print("lever2")
+				lever2.rotation.z += deg_to_rad(180)
+		if raycast_close_object == lever3:
+			if Input.is_action_just_pressed(("interact")):
+				print("lever3")
+				lever3.rotation.z += deg_to_rad(180)
+		if raycast_close_object == lever4:
+			if Input.is_action_just_pressed(("interact")):
+				print("lever4")
+				lever4.rotation.z += deg_to_rad(180)
 	else:
 		couch_popup.visible = false
 		
