@@ -5,25 +5,27 @@
 [ext_resource type="Texture2D" uid="uid://bffoxdmo7q1fm" path="res://blender-and-glb-files/textures/Lever_base_texture.png" id="2_soi7j"]
 [ext_resource type="Texture2D" uid="uid://dj3rr1tg02a5h" path="res://blender-and-glb-files/textures/lever_stick_texture.png" id="3_1kj1s"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kj1s"]
-albedo_texture = ExtResource("2_soi7j")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_soi7j"]
 albedo_texture = ExtResource("3_1kj1s")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uavd"]
 size = Vector3(0.05, 0.277241, 0.203785)
 
-[node name="lever" type="StaticBody3D" unique_id=1108222364]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kj1s"]
+albedo_texture = ExtResource("2_soi7j")
+
+[node name="lever" type="Node3D" unique_id=1153379599]
+
+[node name="lever" type="StaticBody3D" parent="." unique_id=1950279634]
+
+[node name="lever" type="MeshInstance3D" parent="lever" unique_id=1523608581]
+mesh = ExtResource("1_7uavd")
+surface_material_override/0 = SubResource("StandardMaterial3D_soi7j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lever" unique_id=179629836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0893265, 0.0938925)
+shape = SubResource("BoxShape3D_7uavd")
 
 [node name="lever_base" type="MeshInstance3D" parent="." unique_id=2006853752]
 mesh = ExtResource("1_1btnt")
 surface_material_override/0 = SubResource("StandardMaterial3D_1kj1s")
-
-[node name="lever" type="MeshInstance3D" parent="lever_base" unique_id=1523608581]
-mesh = ExtResource("1_7uavd")
-surface_material_override/0 = SubResource("StandardMaterial3D_soi7j")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=179629836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0893265, 0.0938925)
-shape = SubResource("BoxShape3D_7uavd")
