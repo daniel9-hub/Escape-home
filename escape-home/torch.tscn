@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cuvx84q74vd1h"]
+
+[ext_resource type="ArrayMesh" uid="uid://kw34ru0ayc41" path="res://meshes/torch.obj" id="1_pa17o"]
+
+[node name="torch" type="StaticBody3D" unique_id=1415986778]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=203834106]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("1_pa17o")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=836207295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5367751, 0)
+light_color = Color(1, 1, 0, 1)
