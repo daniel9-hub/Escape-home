@@ -79,8 +79,13 @@ func _process(_delta: float) -> void:
 					bookshelf_book1.visible = true
 					book1.placed = true 
 			elif close_object == torch1:
+				print("torch1")
 				if Input.is_action_just_pressed("interact"):
-					torch1.rotation.y += deg_to_rad(45)
+					torch1.rotation.z += deg_to_rad(45)
+			elif close_object == torch2:
+				print("torch2")
+				if Input.is_action_just_pressed("interact"):
+					torch2.rotation.z += deg_to_rad(-45)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
