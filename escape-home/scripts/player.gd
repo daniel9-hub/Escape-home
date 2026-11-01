@@ -130,6 +130,10 @@ func _process(_delta: float) -> void:
 				if l4 == false:
 					#print("open")
 					Secret_wall.open = true
+	if round(rad_to_deg(torch1.rotation.z)) >= 360.0:
+		torch1.rotation.z = 0
+	if round(rad_to_deg(torch2.rotation.z)) <= -360.0:
+		torch2.rotation.z = 0
 	if round(rad_to_deg(torch1.rotation.z)) == 90.0:
 		if round(rad_to_deg(torch2.rotation.z)) == -225.0:
 			print("torch_combination_correct")
