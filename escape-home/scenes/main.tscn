@@ -27,6 +27,15 @@ font_size = 24
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bx3dq"]
 albedo_texture = ExtResource("7_85g3d")
 
+[sub_resource type="BoxMesh" id="BoxMesh_0hjsr"]
+size = Vector3(2, 2.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
+albedo_color = Color(0.58431375, 0.58431375, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
+size = Vector3(2, 2.3, 0.3)
+
 [node name="Node3D" type="Node3D" unique_id=2043496046]
 
 [node name="floor" type="StaticBody3D" parent="." unique_id=1667584310]
@@ -57,7 +66,7 @@ mesh = SubResource("BoxMesh_tugg1")
 shape = SubResource("BoxShape3D_tugg1")
 
 [node name="house" parent="." unique_id=363629378 instance=ExtResource("2_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, 0, 0.001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08026384, 0.010357857, -0.05563359)
 
 [node name="couch" parent="." unique_id=1505873417 instance=ExtResource("3_tipki")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.053423, -0.15, 3.4901755)
@@ -127,3 +136,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6355705, 0.58270466, -10.48
 
 [node name="torch2" parent="." unique_id=40446883 instance=ExtResource("10_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.950025, 0.58270466, -10.483452)
+
+[node name="Secret_wall" type="StaticBody3D" parent="." unique_id=1781341443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.43, -0.099, -4.893)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Secret_wall" unique_id=1111611418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83967197, 0)
+mesh = SubResource("BoxMesh_0hjsr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ya4ey")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Secret_wall" unique_id=1542182932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83967197, 0)
+shape = SubResource("BoxShape3D_choun")
