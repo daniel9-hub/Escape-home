@@ -15,6 +15,7 @@ const JUMP_VELOCITY = 4.5
 @onready var lever4 = get_tree().current_scene.get_node("lever4/lever")
 @onready var torch1 = get_tree().current_scene.get_node("torch")
 @onready var torch2 = get_tree().current_scene.get_node("torch2")
+@onready var Secret_wall = get_tree().current_scene.get_node("Secret_wall")
 var l1 = false
 var l2 = false
 var l3 = false
@@ -127,6 +128,7 @@ func _process(_delta: float) -> void:
 		if l2 == false:
 			if l3 == true:
 				if l4 == false:
-					print("open")
+					#print("open")
+					Secret_wall.open = true
 	#print(couch.get_path())
 	#print(couch.get_script())
