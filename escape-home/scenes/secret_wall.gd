@@ -9,8 +9,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if open == true:
-		while moving < 300:
-			position.y -= 0.01
+		while moving < 500:
+			position.y -= 0.005
 			moving += 1
 			print(moving)
 			await get_tree().create_timer(1.05).timeout
