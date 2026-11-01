@@ -2,11 +2,19 @@
 
 [ext_resource type="ArrayMesh" uid="uid://kw34ru0ayc41" path="res://meshes/torch.obj" id="1_pa17o"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pa17o"]
+size = Vector3(0.071282, 0.534457, 0.07188)
+
 [node name="torch" type="StaticBody3D" unique_id=1415986778]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=203834106]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = ExtResource("1_pa17o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1911889703]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.13445702, 0)
+shape = SubResource("BoxShape3D_pa17o")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=836207295]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5367751, 0)

@@ -13,6 +13,8 @@ const JUMP_VELOCITY = 4.5
 @onready var lever2 = get_tree().current_scene.get_node("lever2/lever")
 @onready var lever3 = get_tree().current_scene.get_node("lever3/lever")
 @onready var lever4 = get_tree().current_scene.get_node("lever4/lever")
+@onready var torch1 = get_tree().current_scene.get_node("torch")
+@onready var torch2 = get_tree().current_scene.get_node("torch2")
 var l1 = false
 var l2 = false
 var l3 = false
@@ -76,6 +78,9 @@ func _process(_delta: float) -> void:
 				if Input.is_action_just_pressed("interact") and book1.picked_up == true:
 					bookshelf_book1.visible = true
 					book1.placed = true 
+			elif close_object == torch1:
+				if Input.is_action_just_pressed("interact"):
+					torch1.rotation.y += deg_to_rad(45)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
