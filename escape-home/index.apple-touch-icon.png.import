@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwrdgf30jir0r"
-path="res://.godot/imported/Escape-home.icon.png-240c1b6243727ca8c472004fab395677.ctex"
+uid="uid://cvtn3pofedowf"
+path="res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Escape-home.icon.png"
-dest_files=["res://.godot/imported/Escape-home.icon.png-240c1b6243727ca8c472004fab395677.ctex"]
+source_file="res://index.apple-touch-icon.png"
+dest_files=["res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex"]
 
 [params]
 

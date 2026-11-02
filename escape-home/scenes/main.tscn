@@ -8,9 +8,9 @@
 [ext_resource type="ArrayMesh" uid="uid://buwohsihjenw3" path="res://meshes/book.obj" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://1caypox6xhr" path="res://scenes/door.tscn" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dgtra07r0b4ie" path="res://meshes/book1.png" id="7_85g3d"]
-[ext_resource type="PackedScene" uid="uid://cachyuepunw6y" path="res://lever.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" uid="uid://cuvx84q74vd1h" path="res://torch.tscn" id="10_choun"]
-[ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scenes/secret_wall.gd" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://cachyuepunw6y" path="res://scenes/lever.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cuvx84q74vd1h" path="res://scenes/torch.tscn" id="10_choun"]
+[ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
