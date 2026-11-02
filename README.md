@@ -1,5 +1,5 @@
 # Escape Home
-This is a 3d puzzle game about trying to escape your home.
+This is a 3d puzzle game about trying to escape your home. I made it because i wanted to learn to make 3d games in godot.
 # How to play
 ## Controls
 - Use W,A,S,D to move and E to interact with stuff
