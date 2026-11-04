@@ -16,11 +16,12 @@ const JUMP_VELOCITY = 4.5
 @onready var torch1 = get_tree().current_scene.get_node("torch")
 @onready var torch2 = get_tree().current_scene.get_node("torch2")
 @onready var Secret_wall = get_tree().current_scene.get_node("Secret_wall")
+@onready var torch3 = get_tree().current_scene.get_node("torch3")
 var l1 = false
 var l2 = false
 var l3 = false
 var l4 = false
-
+var torch_combination_correct = false
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -80,13 +81,16 @@ func _process(_delta: float) -> void:
 					bookshelf_book1.visible = true
 					book1.placed = true 
 			elif close_object == torch1:
-				print("torch1")
+				#print("torch1")
 				if Input.is_action_just_pressed("interact"):
 					torch1.rotation.z += deg_to_rad(45)
 			elif close_object == torch2:
-				print("torch2")
+				#print("torch2")
 				if Input.is_action_just_pressed("interact"):
 					torch2.rotation.z += deg_to_rad(-45)
+			elif close_object == torch3 and torch_combination_correct:
+				if Input.is_action_just_pressed("interact"):
+					torch3.move = true
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
@@ -136,8 +140,9 @@ func _process(_delta: float) -> void:
 		torch2.rotation.z = 0
 	if round(rad_to_deg(torch1.rotation.z)) == 90.0:
 		if round(rad_to_deg(torch2.rotation.z)) == -225.0:
-			print("torch_combination_correct")
-	print(round(rad_to_deg(torch1.rotation.z)))
-	print(round(rad_to_deg(torch2.rotation.z)))
+			#print("torch_combination_correct")
+			torch_combination_correct = true
+	#print(round(rad_to_deg(torch1.rotation.z)))
+	#print(round(rad_to_deg(torch2.rotation.z)))
 	#print(couch.get_path())
 	#print(couch.get_script())
