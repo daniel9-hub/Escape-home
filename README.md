@@ -1,8 +1,9 @@
 # Escape Home
-This is a 3d puzzle game about trying to escape your home.
+This is a 3d puzzle game about trying to escape your home. But for some reason, your house has some weird items like levers like torches. Your goal is to figure out how you can use these items to escape. I made this game because i wanted to learn how to make 3d games in godot.
 # How to play
 ## Controls
 - Use W,A,S,D to move and E to interact with stuff
+- When starting the game, click the game window to capture your mouse and when stopping, press ESC to release it
 ## Where to play
 - https://daniel985.itch.io/escape-home
 - the game is played on the web so there is no need to download anything
