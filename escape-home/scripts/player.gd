@@ -17,6 +17,7 @@ const JUMP_VELOCITY = 4.5
 @onready var torch2 = get_tree().current_scene.get_node("torch2")
 @onready var Secret_wall = get_tree().current_scene.get_node("Secret_wall")
 @onready var torch3 = get_tree().current_scene.get_node("torch3")
+@onready var bookstand1 = get_tree().current_scene.get_node("bookstand1")
 var l1 = false
 var l2 = false
 var l3 = false
@@ -91,6 +92,10 @@ func _process(_delta: float) -> void:
 			elif close_object == torch3 and torch_combination_correct:
 				if Input.is_action_just_pressed("interact"):
 					torch3.move = true
+			elif close_object == bookstand1:
+				if Input.is_action_just_pressed("interact"):
+					switch_camera()
+					print("bookstand1")
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
@@ -146,3 +151,5 @@ func _process(_delta: float) -> void:
 	#print(round(rad_to_deg(torch2.rotation.z)))
 	#print(couch.get_path())
 	#print(couch.get_script())
+func switch_camera():
+	$"../bookstand1/Camera3D".make_current()
