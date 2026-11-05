@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cuvx84q74vd1h" path="res://scenes/torch.tscn" id="10_choun"]
 [ext_resource type="Script" uid="uid://4go81qfdimsr" path="res://scenes/torch3.gd" id="11_eb6dy"]
 [ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://bookstand_1.tscn" id="13_trceg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -154,3 +155,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ya4ey")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Secret_wall" unique_id=1542182932]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83967197, 0)
 shape = SubResource("BoxShape3D_choun")
+
+[node name="bookstand1" parent="." unique_id=966072738 instance=ExtResource("13_trceg")]
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0.15870339, -0.26021653, -9.689545)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="bookstand1" unique_id=1316434681]
+transform = Transform3D(-4.3755485e-08, -0.9554121, 0.29527572, -1.963118e-09, 0.29527572, 0.95541215, -1, 4.1224855e-08, -1.479552e-08, 0.5011961, 2.2496688, 0)
+spot_angle = 24.51

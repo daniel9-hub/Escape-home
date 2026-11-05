@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dy5uwnv6hukfc"]
+
+[ext_resource type="ArrayMesh" uid="uid://dftmlpygj8p0k" path="res://meshes/bookstand1.obj" id="1_148xj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
+albedo_color = Color(0.21271044, 0.11359521, 0.013542513, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58it5"]
+albedo_color = Color(0.21176471, 0.11372549, 0.011764706, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_148xj"]
+size = Vector3(0.4, 1.161413, 0.6)
+
+[node name="bookstand1" type="StaticBody3D" unique_id=966072738]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1636946842]
+mesh = ExtResource("1_148xj")
+surface_material_override/0 = SubResource("StandardMaterial3D_148xj")
+surface_material_override/1 = SubResource("StandardMaterial3D_58it5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1083120017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5557065, 0)
+shape = SubResource("BoxShape3D_148xj")
