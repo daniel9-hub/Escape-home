@@ -9,17 +9,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if move == true:
-		while movement <= 10:
+		if movement < 10:
 			rotation.z -= deg_to_rad(1)
 			movement += 1
-			#print("backward")
-			await get_tree().create_timer(1.05).timeout
-		while movement > 10 and movement <= 20:
+		elif movement >= 10 and movement < 20:
 			rotation.z += deg_to_rad(1)
 			movement += 1
-			#print("forward")
-			await get_tree().create_timer(1.05).timeout
-		if movement >= 20:
+		elif movement == 20:
 			movement = 0
 			move = false
 	print(movement)
