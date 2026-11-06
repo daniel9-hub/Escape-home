@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 		while moving < 500:
 			position.y -= 0.005
 			moving += 1
-			print(moving)
+			#print(moving)
 			await get_tree().create_timer(1.05).timeout

@@ -158,11 +158,3 @@ shape = SubResource("BoxShape3D_choun")
 
 [node name="bookstand1" parent="." unique_id=966072738 instance=ExtResource("13_trceg")]
 transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 1.2164268, -0.26021653, -9.631889)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="bookstand1" unique_id=1316434681]
-transform = Transform3D(-4.3755485e-08, -0.9554121, 0.29527572, -1.963118e-09, 0.29527572, 0.95541215, -1, 4.1224855e-08, -1.479552e-08, 0.5011961, 2.2496688, 0)
-spot_angle = 24.51
-
-[node name="Camera3D" type="Camera3D" parent="bookstand1" unique_id=91736294]
-transform = Transform3D(-5.3449753e-08, -0.62923855, 0.77721226, 2.7504903e-08, 0.77721226, 0.62923855, -1, 5.5009792e-08, -2.4234659e-08, 0.34815234, 1.258615, 0)
-fov = 52.0

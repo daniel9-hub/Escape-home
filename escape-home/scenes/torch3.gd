@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 		elif movement == 20:
 			movement = 0
 			move = false
-	print(movement)
+	#print(movement)
