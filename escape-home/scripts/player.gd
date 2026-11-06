@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(event:InputEvent) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and bookstand1.active == false:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	elif event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -153,3 +153,4 @@ func _process(_delta: float) -> void:
 	#print(couch.get_script())
 func switch_camera():
 	$"../bookstand1/Camera3D".make_current()
+	bookstand1.active = true

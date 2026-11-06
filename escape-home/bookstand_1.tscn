@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dy5uwnv6hukfc"]
 
+[ext_resource type="Script" uid="uid://c2hmkjo4qb1vb" path="res://bookstand_1.gd" id="1_58it5"]
 [ext_resource type="ArrayMesh" uid="uid://dftmlpygj8p0k" path="res://meshes/bookstand1.obj" id="1_148xj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
@@ -12,6 +13,7 @@ albedo_color = Color(0.21176471, 0.11372549, 0.011764706, 1)
 size = Vector3(0.4, 1.161413, 0.6)
 
 [node name="bookstand1" type="StaticBody3D" unique_id=966072738]
+script = ExtResource("1_58it5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1636946842]
 mesh = ExtResource("1_148xj")
