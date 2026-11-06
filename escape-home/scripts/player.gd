@@ -92,6 +92,7 @@ func _process(_delta: float) -> void:
 			elif close_object == torch3 and torch_combination_correct:
 				if Input.is_action_just_pressed("interact"):
 					torch3.move = true
+					bookstand1.position = Vector3(0.159,-0.26,-9.632)
 			elif close_object == bookstand1:
 				if Input.is_action_just_pressed("interact"):
 					switch_camera()
