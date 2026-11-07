@@ -19,7 +19,7 @@ func _on_area_input_event(camera, event, event_position, normal, shape_idx):
 func picked_up():
 	var mouse = get_viewport().get_mouse_position()
 	var center = get_viewport().get_visible_rect().size / 2
-	position.x = (mouse.y - center.y) * 0.001
-	position.z = -(mouse.x - center.x) * 0.001
+	print(get_node_or_null("CanvasLayer/Sprite2D"))
+	$"../CanvasLayer/Sprite2D".global_position = get_viewport().get_mouse_position()
 	print(mouse.y)
 	print(position.x)
