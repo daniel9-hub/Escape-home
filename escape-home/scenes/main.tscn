@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cuvx84q74vd1h" path="res://scenes/torch.tscn" id="10_choun"]
 [ext_resource type="Script" uid="uid://4go81qfdimsr" path="res://scenes/torch3.gd" id="11_eb6dy"]
 [ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://bookstand_1.tscn" id="13_trceg"]
+[ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://bookstand1.tscn" id="13_trceg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -156,5 +156,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ya4ey")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83967197, 0)
 shape = SubResource("BoxShape3D_choun")
 
-[node name="bookstand1" parent="." unique_id=966072738 instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 1.2164268, -0.26021653, -9.631889)
+[node name="bookstand1" parent="." unique_id=730204728 instance=ExtResource("13_trceg")]

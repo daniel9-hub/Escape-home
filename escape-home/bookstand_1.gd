@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Node3D
 @onready var player = get_tree().current_scene.get_node("player")
 var active = false
 

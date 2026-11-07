@@ -17,33 +17,39 @@ data = PackedVector3Array(-0.14649999, 1.1364, -0.2625, -0.14729999, 1.1355, -0.
 [sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
 size = Vector3(0.07, 0.15, 0)
 
-[node name="bookstand1" type="StaticBody3D" unique_id=966072738]
+[node name="bookstand1" type="Node3D" unique_id=730204728]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_58it5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1636946842]
+[node name="bookstand1" type="StaticBody3D" parent="." unique_id=2075360880]
+transform = Transform3D(0.76604444, -0.6427876, 0, 0.6427876, 0.76604444, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bookstand1" unique_id=1636946842]
+transform = Transform3D(1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_148xj")
 surface_material_override/0 = SubResource("StandardMaterial3D_148xj")
 surface_material_override/1 = SubResource("StandardMaterial3D_58it5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1303459824]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bookstand1" unique_id=1303459824]
+transform = Transform3D(1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_jnb65")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1247081496]
-transform = Transform3D(-2.8119796e-08, -0.7656092, 0.643306, -3.346584e-08, 0.643306, 0.7656092, -1, 0, -4.371139e-08, 0.06778284, 0.9629922, -0.21668702)
+[node name="Sprite3D" type="Sprite3D" parent="bookstand1" unique_id=1247081496]
+transform = Transform3D(-3.883133e-09, -0.7656092, 0.64330596, -3.3465838e-08, 0.64330596, 0.7656092, -1, -1.855581e-08, -2.8119796e-08, 0.06778281, 0.9629922, -0.21668702)
 pixel_size = 0.0005
 texture = ExtResource("3_kj7up")
 script = ExtResource("4_jnb65")
 
-[node name="Area3D" type="Area3D" parent="Sprite3D" unique_id=1925219820]
+[node name="Area3D" type="Area3D" parent="bookstand1/Sprite3D" unique_id=1925219820]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/Area3D" unique_id=1124961579]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bookstand1/Sprite3D/Area3D" unique_id=1124961579]
 transform = Transform3D(1, 0, -5.0448534e-13, 0, 1, 7.764614e-23, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_bx3dq")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1498309512]
-transform = Transform3D(-4.3755485e-08, -0.9554121, 0.29527572, -1.963118e-09, 0.29527572, 0.95541215, -1, 4.1224855e-08, -1.479552e-08, 0.5011961, 2.2496688, 0)
+[node name="SpotLight3D" type="SpotLight3D" parent="bookstand1" unique_id=1498309512]
+transform = Transform3D(-4.3755485e-08, -0.95541227, 0.29527572, -1.9631206e-09, 0.29527572, 0.95541227, -1, 4.1224858e-08, -1.4795519e-08, 0.501196, 2.2496688, 0)
 spot_angle = 24.51
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=237601782]
-transform = Transform3D(-5.3449753e-08, -0.62923855, 0.77721226, 2.7504903e-08, 0.77721226, 0.62923855, -1, 5.5009792e-08, -2.4234659e-08, 0.34815234, 1.258615, 0)
-fov = 52.0
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1849659295]
+transform = Transform3D(-4.371139e-08, -1.0000001, -4.3711392e-08, 0, -4.3711392e-08, 1.0000001, -1, 4.3711385e-08, 1.9106853e-15, -0.6340652, 1.5625613, 0)
+fov = 53.0
