@@ -23,6 +23,8 @@ var l2 = false
 var l3 = false
 var l4 = false
 var torch_combination_correct = false
+func _on_ready():
+	$neck/Camera3D.make_current()
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

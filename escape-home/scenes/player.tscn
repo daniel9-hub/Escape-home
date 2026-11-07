@@ -26,6 +26,7 @@ mesh = SubResource("CapsuleMesh_bx3dq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5496216, 0)
 
 [node name="Camera3D" type="Camera3D" parent="neck" unique_id=1757793269]
+current = true
 fov = 85.0
 
 [node name="RayCast3D" type="RayCast3D" parent="neck" unique_id=920365996]

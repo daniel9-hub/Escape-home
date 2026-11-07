@@ -18,7 +18,8 @@ func _on_area_input_event(camera, event, event_position, normal, shape_idx):
 			picked_up_var = true
 func picked_up():
 	var mouse = get_viewport().get_mouse_position()
-	position.y = -mouse.x*0.001
-	position.z = -mouse.x*0.001
+	var center = get_viewport().get_visible_rect().size / 2
+	position.x = (mouse.y - center.y) * 0.001
+	position.z = -(mouse.x - center.x) * 0.001
+	print(mouse.y)
 	print(position.x)
-	print(position.y)
