@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cyp4v71kqn6h"]
+
+[ext_resource type="Texture2D" uid="uid://cjqigsrygm8cn" path="res://key.png" id="1_3iyly"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
+size = Vector3(0.297, 0.21, 0)
+
+[node name="Sprite3D" type="Sprite3D" unique_id=1405469929]
+pixel_size = 0.00017
+texture = ExtResource("1_3iyly")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1135049584]
+shape = SubResource("BoxShape3D_bx3dq")
