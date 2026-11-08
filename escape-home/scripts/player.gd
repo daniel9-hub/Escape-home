@@ -102,7 +102,7 @@ func _process(_delta: float) -> void:
 				if Input.is_action_just_pressed("interact"):
 					switch_camera()
 					print("bookstand1")
-			if close_object == key_picture_staticbody:
+			if close_object == key_picture_staticbody and key_picture.visible == true:
 				if Input.is_action_just_pressed("interact"):
 					key_picture.visible = false
 					print("key_picture")
