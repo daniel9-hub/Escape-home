@@ -44,8 +44,8 @@ transform = Transform3D(1, 0, -5.0448534e-13, 0, 1, 7.764614e-23, 0, 0, 1, 0, 0,
 shape = SubResource("BoxShape3D_bx3dq")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1849659295]
-transform = Transform3D(-4.371139e-08, -1.0000001, -4.3711392e-08, 0, -4.3711392e-08, 1.0000001, -1, 4.3711385e-08, 1.9106853e-15, -0.6340652, 1.5625613, 0)
-fov = 53.0
+transform = Transform3D(-4.371139e-08, -1.0000002, -1.1920929e-07, 0, -1.1920929e-07, 1.0000002, -1, 4.3711378e-08, 6.631772e-15, -0.6340653, 1.5625614, 0)
+fov = 30.5
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1498309512]
 transform = Transform3D(-3.2256775e-08, -0.9216878, -0.38793287, -2.962932e-08, -0.38793287, 0.9216878, -1, 4.122485e-08, -1.4795515e-08, -1.0621208, 2.0455089, 0)
@@ -54,6 +54,7 @@ spot_angle = 24.51
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=575728162]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2103269208]
-position = Vector2(735, 396)
-scale = Vector2(0.5, 0.5)
+position = Vector2(759, 368)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_kj7up")
+offset = Vector2(65.235, -135.81)
