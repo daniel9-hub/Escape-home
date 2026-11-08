@@ -105,6 +105,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bx3dq")
 
 [node name="key_picture" parent="bookshelf" unique_id=1291012730 instance=ExtResource("8_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022997856, 0.67303133, 0.29941392)
+visible = false
 
 [node name="door" parent="." unique_id=1111695393 instance=ExtResource("6_ya4ey")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.008111477, 0.8356911, 4.828761)
@@ -161,3 +162,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83967197, 0)
 shape = SubResource("BoxShape3D_choun")
 
 [node name="bookstand1" parent="." unique_id=730204728 instance=ExtResource("13_trceg")]
+transform = Transform3D(-0.76604426, -0.6427874, 8.742278e-08, -0.6427874, 0.76604426, 0, -6.696972e-08, -5.619426e-08, -1, 1.216, -0.26, -9.632)
