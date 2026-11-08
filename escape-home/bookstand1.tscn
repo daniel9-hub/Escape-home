@@ -4,6 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dftmlpygj8p0k" path="res://meshes/bookstand1.obj" id="1_148xj"]
 [ext_resource type="Texture2D" uid="uid://p8o1yk85g5gc" path="res://pen.png" id="3_kj7up"]
 [ext_resource type="Script" uid="uid://ddnw7xwrxgmxl" path="res://pen.gd" id="4_jnb65"]
+[ext_resource type="Texture2D" uid="uid://cjqigsrygm8cn" path="res://key.png" id="5_ptnhi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
 albedo_color = Color(0.21271044, 0.11359521, 0.013542513, 1)
@@ -58,3 +59,8 @@ position = Vector2(759, 368)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_kj7up")
 offset = Vector2(65.235, -135.81)
+
+[node name="key_picture" type="Sprite3D" parent="." unique_id=69382442]
+transform = Transform3D(-4.3711402e-08, -1.0000005, -2.9802322e-08, -1.7763568e-15, 0, 1.0000002, -1.0000001, 4.37114e-08, 1.9106855e-15, -0.5729648, 0.77914995, 0)
+pixel_size = 0.00017
+texture = ExtResource("5_ptnhi")

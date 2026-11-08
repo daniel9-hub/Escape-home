@@ -2,12 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cjqigsrygm8cn" path="res://key.png" id="1_3iyly"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
-size = Vector3(0.297, 0.21, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
+size = Vector3(0.297, 0.60102296, 0.01)
 
-[node name="Sprite3D" type="Sprite3D" unique_id=1405469929]
+[node name="key_picture" type="Node3D" unique_id=185677499]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1023400322]
 pixel_size = 0.00017
 texture = ExtResource("1_3iyly")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1135049584]
-shape = SubResource("BoxShape3D_bx3dq")
+[node name="key_picture_staticbody" type="StaticBody3D" parent="." unique_id=355477848]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="key_picture_staticbody" unique_id=569231781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19551149, 0)
+shape = SubResource("BoxShape3D_tugg1")

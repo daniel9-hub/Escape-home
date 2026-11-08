@@ -18,6 +18,8 @@ const JUMP_VELOCITY = 4.5
 @onready var Secret_wall = get_tree().current_scene.get_node("Secret_wall")
 @onready var torch3 = get_tree().current_scene.get_node("torch3")
 @onready var bookstand1 = get_tree().current_scene.get_node("bookstand1")
+@onready var key_picture_staticbody = get_tree().current_scene.get_node("bookshelf/key_picture/key_picture_staticbody")
+@onready var key_picture = get_tree().current_scene.get_node("bookshelf/key_picture")
 var l1 = false
 var l2 = false
 var l3 = false
@@ -99,6 +101,11 @@ func _process(_delta: float) -> void:
 				if Input.is_action_just_pressed("interact"):
 					switch_camera()
 					print("bookstand1")
+			if close_object == key_picture_staticbody:
+				if Input.is_action_just_pressed("interact"):
+					key_picture.visible = false
+					print("key_picture")
+			#print(close_object)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
