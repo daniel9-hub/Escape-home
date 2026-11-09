@@ -8,12 +8,12 @@
 [ext_resource type="ArrayMesh" uid="uid://buwohsihjenw3" path="res://meshes/book.obj" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://1caypox6xhr" path="res://scenes/door.tscn" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dgtra07r0b4ie" path="res://meshes/book1.png" id="7_85g3d"]
-[ext_resource type="PackedScene" uid="uid://cyp4v71kqn6h" path="res://key_picture.tscn" id="8_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://cyp4v71kqn6h" path="res://scenes/key_picture.tscn" id="8_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://cachyuepunw6y" path="res://scenes/lever.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cuvx84q74vd1h" path="res://scenes/torch.tscn" id="10_choun"]
-[ext_resource type="Script" uid="uid://4go81qfdimsr" path="res://scenes/torch3.gd" id="11_eb6dy"]
+[ext_resource type="Script" uid="uid://4go81qfdimsr" path="res://scripts/torch3.gd" id="11_eb6dy"]
 [ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://bookstand1.tscn" id="13_trceg"]
+[ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://scenes/bookstand1.tscn" id="13_trceg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
