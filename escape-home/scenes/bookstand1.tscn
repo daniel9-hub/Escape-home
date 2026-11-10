@@ -4,6 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dftmlpygj8p0k" path="res://meshes/bookstand1.obj" id="1_148xj"]
 [ext_resource type="Texture2D" uid="uid://p8o1yk85g5gc" path="res://2d_assets/pen.png" id="3_glkou"]
 [ext_resource type="Script" uid="uid://ddnw7xwrxgmxl" path="res://scripts/pen.gd" id="4_jnb65"]
+[ext_resource type="Script" uid="uid://bm8yvxtn5xoun" path="res://scripts/bookstand1_escape.gd" id="5_ry7xu"]
 [ext_resource type="Texture2D" uid="uid://cjqigsrygm8cn" path="res://2d_assets/key.png" id="5_vl2ff"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
@@ -17,6 +18,11 @@ data = PackedVector3Array(-0.14649999, 1.1364, -0.2625, -0.14729999, 1.1355, -0.
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bx3dq"]
 size = Vector3(0.07, 0.15, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bx3dq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
+size = Vector3(0.05, 0.05, 0)
 
 [node name="bookstand1" type="StaticBody3D" unique_id=562449817]
 transform = Transform3D(0.7660443, 0.64278746, 0, -0.64278746, 0.7660443, 0, 0, 0, 1, 0, 0, 0)
@@ -43,6 +49,17 @@ script = ExtResource("4_jnb65")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/Area3D" unique_id=1124961579]
 transform = Transform3D(1, 0, -5.0448534e-13, 0, 1, 7.764614e-23, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_bx3dq")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=471690200]
+transform = Transform3D(1.8536774e-08, -0.99999976, 0.00067678094, -2.813235e-08, 0.00067678094, 0.99999976, -1, -1.855581e-08, -2.8119796e-08, -0.780838, 0.7764242, 0.23849568)
+pixel_size = 0.05
+texture = SubResource("PlaceholderTexture2D_bx3dq")
+script = ExtResource("5_ry7xu")
+
+[node name="Area3D" type="Area3D" parent="Sprite3D2" unique_id=1199285008]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D2/Area3D" unique_id=2132893207]
+shape = SubResource("BoxShape3D_tugg1")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1849659295]
 transform = Transform3D(-4.371139e-08, -1.0000002, -1.1920929e-07, 0, -1.1920929e-07, 1.0000002, -1, 4.3711378e-08, 6.631772e-15, -0.6340653, 1.5625614, 0)

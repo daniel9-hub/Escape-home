@@ -106,6 +106,7 @@ func _process(_delta: float) -> void:
 				if Input.is_action_just_pressed("interact"):
 					key_picture.visible = false
 					print("key_picture")
+					key_picture.picked_up = true
 			#print(close_object)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
@@ -163,5 +164,9 @@ func _process(_delta: float) -> void:
 	#print(couch.get_path())
 	#print(couch.get_script())
 func switch_camera():
-	$"../bookstand1/Camera3D".make_current()
-	bookstand1.active = true
+	if bookstand1.active == false:
+		$"../bookstand1/Camera3D".make_current()
+		bookstand1.active = true
+	else:
+		$neck/Camera3D.make_current()
+		bookstand1.active = false
