@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://ddnw7xwrxgmxl" path="res://scripts/pen.gd" id="4_jnb65"]
 [ext_resource type="Script" uid="uid://bm8yvxtn5xoun" path="res://scripts/bookstand1_escape.gd" id="5_ry7xu"]
 [ext_resource type="Texture2D" uid="uid://cjqigsrygm8cn" path="res://2d_assets/key.png" id="5_vl2ff"]
+[ext_resource type="Texture2D" uid="uid://dk8y1akl338rm" path="res://icon.svg" id="6_qi6ni"]
+[ext_resource type="Script" uid="uid://btumky2c0ftm8" path="res://scenes/key_picture_popup.gd" id="6_ry7xu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
 albedo_color = Color(0.21271044, 0.11359521, 0.013542513, 1)
@@ -23,14 +25,6 @@ size = Vector3(0.07, 0.15, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tugg1"]
 size = Vector3(0.05, 0.05, 0)
-
-[sub_resource type="LabelSettings" id="LabelSettings_tugg1"]
-font_size = 24
-font_color = Color(0, 0, 0, 1)
-outline_size = 3
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx3dq"]
-size = Vector2(150, 33)
 
 [node name="bookstand1" type="StaticBody3D" unique_id=562449817]
 transform = Transform3D(0.7660443, 0.64278746, 0, -0.64278746, 0.7660443, 0, 0, 0, 1, 0, 0, 0)
@@ -78,6 +72,7 @@ transform = Transform3D(-3.2256775e-08, -0.9216878, -0.38793287, -2.962932e-08, 
 spot_angle = 24.51
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=575728162]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2103269208]
 visible = false
@@ -86,24 +81,19 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_glkou")
 offset = Vector2(65.235, -135.81)
 
-[node name="key_picture_popup" type="Label" parent="CanvasLayer" unique_id=486630592]
+[node name="key_picture_popup" type="TextureButton" parent="CanvasLayer" unique_id=1057066902]
 visible = false
-offset_left = 502.0
-offset_top = 511.0
-offset_right = 652.0
-offset_bottom = 582.0
-text = "Place picture
-"
-label_settings = SubResource("LabelSettings_tugg1")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer/key_picture_popup" unique_id=1222752104]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/key_picture_popup/Area2D" unique_id=1243049912]
-position = Vector2(75, 19.5)
-shape = SubResource("RectangleShape2D_bx3dq")
+offset_left = 503.0
+offset_top = 461.0
+offset_right = 632.0
+offset_bottom = 589.0
+texture_normal = ExtResource("6_qi6ni")
+script = ExtResource("6_ry7xu")
 
 [node name="key_picture_sprite" type="Sprite3D" parent="." unique_id=69382442]
 transform = Transform3D(-4.3711402e-08, -1.0000005, -2.9802322e-08, -1.7763568e-15, 0, 1.0000002, -1.0000001, 4.37114e-08, 1.9106855e-15, -0.5729648, 0.77914995, 0)
 visible = false
 pixel_size = 0.00017
 texture = ExtResource("5_vl2ff")
+
+[connection signal="pressed" from="CanvasLayer/key_picture_popup" to="." method="_on_key_picture_popup_pressed"]

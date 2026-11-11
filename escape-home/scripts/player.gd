@@ -167,6 +167,8 @@ func switch_camera():
 	if bookstand1.active == false:
 		$"../bookstand1/Camera3D".make_current()
 		bookstand1.active = true
+		bookstand1.get_node("CanvasLayer").visible = true
 	else:
 		$neck/Camera3D.make_current()
 		bookstand1.active = false
+		bookstand1.get_node("CanvasLayer").visible = false
