@@ -20,8 +20,8 @@ func picked_up():
 	var mouse = get_viewport().get_mouse_position()
 	var center = get_viewport().get_visible_rect().size / 2
 	print(get_node_or_null("CanvasLayer/Sprite2D"))
-	$"../CanvasLayer/Sprite2D".global_position = get_viewport().get_mouse_position()
+	$"../CanvasLayer/Control/Sprite2D".global_position = get_viewport().get_mouse_position()
 	$"../Sprite3D".visible = false
-	$"../CanvasLayer/Sprite2D".visible = true
+	$"../CanvasLayer/Control/Sprite2D".visible = true
 	print(mouse.y)
 	print(position.x)

@@ -14,9 +14,9 @@ func _process(delta: float) -> void:
 	if active:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		if key_picture.picked_up == true and key_picture.placed == false:
-			$CanvasLayer/key_picture_popup.visible = true
-		if Input.is_action_just_pressed("move_backward") and $CanvasLayer/key_picture_popup.visible == true:
-			pass
+			$CanvasLayer/Control/key_picture_popup.visible = true
+		#if Input.is_action_just_pressed("move_backward") and $CanvasLayer/key_picture_popup.visible == true:
+			#pass
 			#$CanvasLayer/key_picture_popup.visible = false
 			
 
@@ -24,6 +24,6 @@ func _process(delta: float) -> void:
 func _on_key_picture_popup_pressed() -> void:
 	if key_picture.picked_up:
 		$key_picture_sprite.visible = true
-		$CanvasLayer/key_picture_popup.visible = false
+		$CanvasLayer/Control/key_picture_popup.visible = false
 		key_picture.picked_up = false
 		key_picture.placed = true
