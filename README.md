@@ -1,4 +1,6 @@
 # Escape Home
+### Please note that this game is not finished yet and it's currently not possible to escape
+
 This is a 3d puzzle game about trying to escape your home. But for some reason, your house has some weird items like levers like torches. Your goal is to figure out how you can use these items to escape. I made this game because i wanted to learn how to make 3d games in godot.
 # How to play
 ## Controls
