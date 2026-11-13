@@ -9,6 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if dot1_pressed:
+			$dot1/Line2D.add_point($dot1/Line2D.to_local(get_global_mouse_position()))
 		
 
 

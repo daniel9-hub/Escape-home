@@ -7,14 +7,13 @@
 script = ExtResource("1_kgoae")
 
 [node name="dot1" type="TextureButton" parent="." unique_id=985907224]
-offset_left = -446.0
-offset_top = -182.99998
-offset_right = -318.0
-offset_bottom = -54.999985
+offset_right = 128.0
+offset_bottom = 128.0
 scale = Vector2(0.1484375, 0.15624999)
 texture_normal = ExtResource("2_5e6e0")
 
 [node name="Line2D" type="Line2D" parent="dot1" unique_id=180156419]
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=520512810]
 
