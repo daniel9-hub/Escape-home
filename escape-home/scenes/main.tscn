@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://4go81qfdimsr" path="res://scripts/torch3.gd" id="11_eb6dy"]
 [ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://scenes/bookstand1.tscn" id="13_trceg"]
+[ext_resource type="PackedScene" uid="uid://bf8f142jqtsbc" path="res://scenes/electrical_box.tscn" id="15_jkv2x"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -163,3 +164,6 @@ shape = SubResource("BoxShape3D_choun")
 
 [node name="bookstand1" parent="." unique_id=730204728 instance=ExtResource("13_trceg")]
 transform = Transform3D(-0.76604426, -0.6427874, 8.742278e-08, -0.6427874, 0.76604426, 0, -6.696972e-08, -5.619426e-08, -1, 1.216, -0.26, -9.632)
+
+[node name="electrical_box" parent="." unique_id=1480652475 instance=ExtResource("15_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5178013, 0.7329909, 3.2353268)

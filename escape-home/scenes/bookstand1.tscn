@@ -73,6 +73,7 @@ transform = Transform3D(-3.2256775e-08, -0.9216878, -0.38793287, -2.962932e-08, 
 spot_angle = 24.51
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=575728162]
+visible = false
 
 [node name="Control" type="Node2D" parent="CanvasLayer" unique_id=1555080433]
 script = ExtResource("6_2mi7w")
@@ -98,9 +99,11 @@ script = ExtResource("6_ry7xu")
 visible = false
 
 [node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/Control" unique_id=1197333493]
+visible = false
 polygon = PackedVector2Array(499, 406, 821, 405, 832, 419, 833, 436, 818, 445, 816, 459, 815, 489, 805, 496, 759, 497, 750, 491, 750, 449, 736, 449, 736, 488, 728, 496, 681, 498, 669, 489, 671, 451, 502, 451, 492, 472, 476, 493, 453, 501, 413, 513, 392, 507, 358, 496, 337, 480, 325, 456, 322, 431, 324, 399, 331, 373, 348, 353, 372, 336, 394, 330, 426, 330, 452, 333, 468, 340, 487, 359, 503, 380)
 
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Control" unique_id=323656913]
+visible = false
 position = Vector2(583, 416)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_vl2ff")
