@@ -26,6 +26,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(4.6205523e-06, 0, 0.9614695, 1)
 
 [node name="dot2" type="TextureButton" parent="group1" unique_id=2093047900]
 offset_left = -11.999984
@@ -40,6 +41,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(0, 0, 0.9607843, 1)
 
 [node name="dot3" type="TextureButton" parent="group1" unique_id=1331831337]
 offset_left = 112.000015
@@ -65,6 +67,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="dot2" type="TextureButton" parent="group2" unique_id=1485731732]
 offset_left = -14.000031
@@ -79,6 +82,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group2" unique_id=1858710792]
 offset_left = 112.99997
@@ -105,6 +109,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(0.8564939, 3.657937e-06, 8.663535e-07, 1)
 
 [node name="dot2" type="TextureButton" parent="group3" unique_id=673040181]
 offset_left = -10.999985
@@ -120,6 +125,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(0.85490197, 0, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group3" unique_id=1734125603]
 offset_left = 116.000015
@@ -150,6 +156,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(1, 1, 0, 1)
 
 [node name="dot2" type="TextureButton" parent="group4" unique_id=1008897788]
 offset_left = -10.999985
@@ -165,6 +172,7 @@ position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
 width = 30.0
+default_color = Color(1, 1, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group4" unique_id=1904853372]
 offset_left = 116.00001
