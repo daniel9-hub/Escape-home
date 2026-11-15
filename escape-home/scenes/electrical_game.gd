@@ -1,6 +1,6 @@
 extends Node2D
 var dot1_pressed = false
-
+var dot11_pressed = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,11 +10,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dot1_pressed:
 		$dot1/Line2D.set_point_position(1,$dot1/Line2D.to_local(get_global_mouse_position()))
-		if Input.is_action_just_pressed("mouse_click_left"):
+		if dot11_pressed == true:
 			dot1_pressed = false
+			dot11_pressed = false
 
 
 func _on_dot_1_pressed() -> void:
-	dot1_pressed = true
-	$dot1/Line2D.add_point($dot1.position)
-	$dot1/Line2D.add_point($dot1/Line2D.to_local(get_global_mouse_position()))
+	if dot1_pressed == false:
+		dot1_pressed = true
+		$dot1/Line2D.add_point($dot1.position)
+		$dot1/Line2D.add_point($dot1/Line2D.to_local(get_global_mouse_position()))
+
+
+func _on_dot_2_pressed() -> void:
+	dot11_pressed = true
