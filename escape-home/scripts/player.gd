@@ -20,6 +20,7 @@ const JUMP_VELOCITY = 4.5
 @onready var bookstand1 = get_tree().current_scene.get_node("bookstand1")
 @onready var key_picture_staticbody = get_tree().current_scene.get_node("bookshelf/key_picture/key_picture_staticbody")
 @onready var key_picture = get_tree().current_scene.get_node("bookshelf/key_picture")
+@onready var electrical_box = get_tree().current_scene.get_node("electrical_box")
 var l1 = false
 var l2 = false
 var l3 = false
@@ -108,6 +109,11 @@ func _process(_delta: float) -> void:
 					print("key_picture")
 					key_picture.picked_up = true
 			#print(close_object)
+			elif close_object == electrical_box:
+				if Input.is_action_just_pressed("interact"):
+					get_tree().change_scene_to_file("res://scenes/electrical_game.tscn")
+					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+					print("box")
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
