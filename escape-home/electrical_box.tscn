@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cgdpnobf6jvbv"]
+
+[ext_resource type="ArrayMesh" uid="uid://seorm6kksjc7" path="res://meshes/electrical_box.obj" id="1_ixx5x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gp17v"]
+size = Vector3(0.2, 0.8, 0.6)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=72926335]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1222869942]
+mesh = ExtResource("1_ixx5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=20336825]
+shape = SubResource("BoxShape3D_gp17v")
