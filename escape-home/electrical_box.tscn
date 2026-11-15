@@ -1,14 +1,49 @@
 [gd_scene format=3 uid="uid://cgdpnobf6jvbv"]
 
+[ext_resource type="Script" uid="uid://dsyor5eb050n6" path="res://electrical_box.gd" id="1_gp17v"]
 [ext_resource type="ArrayMesh" uid="uid://seorm6kksjc7" path="res://meshes/electrical_box.obj" id="1_ixx5x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gp17v"]
 size = Vector3(0.2, 0.8, 0.6)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gp17v"]
+albedo_color = Color(0.5370113, 0.5370113, 0.5370112, 1)
+metallic = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
+material = SubResource("StandardMaterial3D_gp17v")
+size = Vector3(0.05, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixx5x"]
+size = Vector3(0.05, 0.8, 0.6)
+
 [node name="StaticBody3D" type="StaticBody3D" unique_id=72926335]
+script = ExtResource("1_gp17v")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1222869942]
 mesh = ExtResource("1_ixx5x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=20336825]
 shape = SubResource("BoxShape3D_gp17v")
+
+[node name="door" type="StaticBody3D" parent="." unique_id=1135642549]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="door" unique_id=212876636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12524095, 0, 0)
+mesh = SubResource("BoxMesh_bx3dq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door" unique_id=1316038522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12524095, 0, 0)
+shape = SubResource("BoxShape3D_ixx5x")
+
+[node name="door2" type="StaticBody3D" parent="." unique_id=766343093]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.4, 0, -0.2)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="door2" unique_id=564046270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12524095, 0, 0)
+mesh = SubResource("BoxMesh_bx3dq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door2" unique_id=678686242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12524095, 0, 0)
+shape = SubResource("BoxShape3D_ixx5x")

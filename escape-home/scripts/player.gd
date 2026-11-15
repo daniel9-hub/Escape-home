@@ -111,9 +111,12 @@ func _process(_delta: float) -> void:
 			#print(close_object)
 			elif close_object == electrical_box:
 				if Input.is_action_just_pressed("interact"):
-					get_tree().change_scene_to_file("res://scenes/electrical_game.tscn")
-					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-					print("box")
+					if electrical_box.door_open == false:
+						electrical_box.door_open = true
+					elif electrical_box.door_open == true:
+						get_tree().change_scene_to_file("res://scenes/electrical_game.tscn")
+						Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+						print("box")
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
