@@ -13,7 +13,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and $"../../Sprite3D".picked_up_var:
 		if event.pressed:
 			current_line = Line2D.new()
-			current_line.width = 10.0
+			current_line.width = 50.0
 			current_line.default_color = Color.YELLOW
 			add_child(current_line)
 			current_line.add_point(event.position)

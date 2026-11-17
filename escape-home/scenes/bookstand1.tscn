@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c6sqgup783cxm" path="res://scenes/control.gd" id="6_2mi7w"]
 [ext_resource type="Texture2D" uid="uid://dk8y1akl338rm" path="res://icon.svg" id="6_qi6ni"]
 [ext_resource type="Script" uid="uid://btumky2c0ftm8" path="res://scenes/key_picture_popup.gd" id="6_ry7xu"]
+[ext_resource type="Script" uid="uid://df01obotlir3b" path="res://scenes/comparison.gd" id="10_7gkyl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
 albedo_color = Color(0.21271044, 0.11359521, 0.013542513, 1)
@@ -97,17 +98,36 @@ script = ExtResource("6_ry7xu")
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Control" unique_id=165751353]
 visible = false
 
-[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/Control" unique_id=1197333493]
-position = Vector2(84.78083, 85)
-scale = Vector2(0.84540105, 0.8)
-color = Color(1, 0.4392157, 1, 1)
-polygon = PackedVector2Array(499, 406, 639.9745, 405.56216, 821, 405, 832, 419, 833, 436, 818, 445, 816, 459, 815, 489, 805, 496, 759, 497, 750, 491, 750, 449, 736, 449, 736, 488, 728, 496, 681, 498, 669, 489, 671, 451, 502, 451, 492, 472, 476, 493, 453, 501, 413, 513, 392, 507, 358, 496, 337, 480, 325, 456, 322, 431, 324, 399, 331, 373, 348, 353, 372, 336, 394, 330, 426, 330, 452, 333, 468, 340, 487, 359, 503, 380)
-
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Control" unique_id=323656913]
 visible = false
 position = Vector2(583, 416)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_vl2ff")
+
+[node name="comparison" type="Node2D" parent="CanvasLayer/Control" unique_id=23974797]
+script = ExtResource("10_7gkyl")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/Control" unique_id=1366160724]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Control/SubViewportContainer" unique_id=536183027]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/Control/SubViewportContainer/SubViewport" unique_id=1197333493]
+visible = false
+position = Vector2(84.78083, 85)
+scale = Vector2(0.84540105, 0.8)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(499, 406, 639.9745, 405.56216, 821, 405, 832, 419, 833, 436, 818, 445, 816, 459, 815, 489, 805, 496, 759, 497, 750, 491, 750, 449, 736, 449, 736, 488, 728, 496, 681, 498, 669, 489, 671, 451, 502, 451, 492, 472, 476, 493, 453, 501, 413, 513, 392, 507, 358, 496, 337, 480, 325, 456, 322, 431, 324, 399, 331, 373, 348, 353, 372, 336, 394, 330, 426, 330, 452, 333, 468, 340, 487, 359, 503, 380)
+
+[node name="Line2D" type="Line2D" parent="CanvasLayer/Control/SubViewportContainer/SubViewport" unique_id=298203555]
+visible = false
+width = 50.0
+default_color = Color(1, 1, 0, 1)
 
 [node name="key_picture_sprite" type="Sprite3D" parent="." unique_id=69382442]
 transform = Transform3D(-4.3711402e-08, -1.0000005, -2.9802322e-08, -1.7763568e-15, 0, 1.0000002, -1.0000001, 4.37114e-08, 1.9106855e-15, -0.5729648, 0.77914995, 0)
