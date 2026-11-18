@@ -26,3 +26,4 @@ func _input(event: InputEvent) -> void:
 			current_line.queue_free()
 		lines.clear()
 		current_line = null
+	

@@ -6,7 +6,7 @@ var picked_up_var = false
 func _ready() -> void:
 	#area.input_event.connect(_on_area_input_event)
 	area.input_event.connect(_on_area_input_event)
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$"../CanvasLayer/Control/Line2D".hide()
