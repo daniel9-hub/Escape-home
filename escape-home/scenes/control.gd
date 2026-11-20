@@ -10,15 +10,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and $"../../Sprite3D".picked_up_var:
-		if event.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and $"../../Sprite3D".picked_up_var == true:
+		if event.pressed and $"../../Sprite3D".picked_up_var == true:
 			current_line = Line2D.new()
 			current_line.width = 30.0
 			current_line.default_color = Color.YELLOW
 			add_child(current_line)
 			current_line.add_point(event.position)
 			lines.append(current_line)
-	elif event is InputEventMouseMotion and current_line:
+	elif event is InputEventMouseMotion and current_line and $"../../Sprite3D".picked_up_var == true:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			current_line.add_point(event.position)
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and $"../../Sprite3D".picked_up_var and current_line != null:

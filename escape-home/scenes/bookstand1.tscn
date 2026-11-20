@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://btumky2c0ftm8" path="res://scenes/key_picture_popup.gd" id="6_ry7xu"]
 [ext_resource type="Script" uid="uid://df01obotlir3b" path="res://scenes/comparison.gd" id="10_7gkyl"]
 [ext_resource type="PackedScene" uid="uid://b3867n72oaya1" path="res://key_3d.tscn" id="11_w4g2k"]
+[ext_resource type="Script" uid="uid://dk7xuc2s0qpww" path="res://key_3d_bookstand1.gd" id="12_2m0nm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_148xj"]
 albedo_color = Color(0.21271044, 0.11359521, 0.013542513, 1)
@@ -150,11 +151,13 @@ offset_bottom = 40.0
 
 [node name="key_picture_sprite" type="Sprite3D" parent="." unique_id=69382442]
 transform = Transform3D(-4.3711402e-08, -1.0000005, -2.9802322e-08, -1.7763568e-15, 0, 1.0000002, -1.0000001, 4.37114e-08, 1.9106855e-15, -0.5729648, 0.77914995, 0)
+visible = false
 pixel_size = 0.00017
 texture = ExtResource("5_vl2ff")
 
 [node name="key3d" parent="." unique_id=514148428 instance=ExtResource("11_w4g2k")]
 transform = Transform3D(0.045000024, 0, 0, 0, 0.045000024, 0, 0, 0, 0.045, -0.57072127, 0.79058766, 0.09933656)
 visible = false
+script = ExtResource("12_2m0nm")
 
 [connection signal="pressed" from="CanvasLayer/Control/key_picture_popup" to="." method="_on_key_picture_popup_pressed"]

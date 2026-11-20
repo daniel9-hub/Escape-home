@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	#$"../CanvasLayer/Control/Line2D".hide()
 	if picked_up_var == true:
 		picked_up()
-	print(picked_up_var)
+	#print(picked_up_var)
 func _on_area_input_event(camera, event, event_position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

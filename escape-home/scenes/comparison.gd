@@ -49,8 +49,8 @@ func compare_images():
 			elif pixel2 == Color(1.0, 0.0, 0.0, 1.0):
 				reference_pixels += 1
 	#print(pixel)
-	print("reference_pixels:", reference_pixels)
-	print("drawn_pixels:", drawn_pixels)
+	#print("reference_pixels:", reference_pixels)
+	#print("drawn_pixels:", drawn_pixels)
 	if drawn_pixels >= 25000:
 		$"../../../key3d".visible = true
 		drawing_script.clear_lines()
