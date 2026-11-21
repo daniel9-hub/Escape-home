@@ -92,6 +92,15 @@ offset_bottom = 434.0
 text = "Press \"E\" to move couch"
 label_settings = SubResource("LabelSettings_h2yge")
 
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1663954065]
+visible = false
+offset_left = 528.0
+offset_top = 400.0
+offset_right = 611.0
+offset_bottom = 434.0
+text = "Locked"
+label_settings = SubResource("LabelSettings_h2yge")
+
 [node name="book1" parent="." unique_id=2123419466 instance=ExtResource("4_85g3d")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 5.3815417, -0.28783265, 4.660205)
 

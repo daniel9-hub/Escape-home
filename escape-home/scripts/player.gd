@@ -112,7 +112,12 @@ func _process(_delta: float) -> void:
 			elif close_object == electrical_box:
 				if Input.is_action_just_pressed("interact"):
 					if electrical_box.door_open == false:
-						electrical_box.door_open = true
+						if bookstand1.get_node("key3d").picked_up == false:
+							$"../CanvasLayer/Label2".visible = true
+							await get_tree().create_timer(1).timeout
+							$"../CanvasLayer/Label2".visible = false
+						else:
+							electrical_box.door_open = true
 					elif electrical_box.door_open == true:
 						get_tree().change_scene_to_file("res://scenes/electrical_game.tscn")
 						Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
