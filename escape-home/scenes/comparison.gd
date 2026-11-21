@@ -13,20 +13,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	drawing.visible = false
+	if $"../../../Sprite3D".picked_up_var == true:
+		for i in range(drawing_script.lines.size()):
+			if copied_lines.size() <= i:
+				var new_line = Line2D.new()
+				new_line.width = 30.0
+				new_line.default_color = Color.YELLOW
+				new_line.position = Vector2(-335, -350)
 
-	for i in range(drawing_script.lines.size()):
-		if copied_lines.size() <= i:
-			var new_line = Line2D.new()
-			new_line.width = 30.0
-			new_line.default_color = Color.YELLOW
-			new_line.position = Vector2(-335, -350)
+				$"../SubViewport".add_child(new_line)
+				copied_lines.append(new_line)
 
-			$"../SubViewport".add_child(new_line)
-			copied_lines.append(new_line)
-
-		copied_lines[i].points = drawing_script.lines[i].points
-	
-	compare_images()
+			copied_lines[i].points = drawing_script.lines[i].points
+		
+		compare_images()
 
 func get_viewport_image():
 	return $"../SubViewport".get_texture().get_image()
