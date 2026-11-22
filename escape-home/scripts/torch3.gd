@@ -18,4 +18,5 @@ func _process(delta: float) -> void:
 		elif movement == 20:
 			movement = 0
 			move = false
+			$"../OmniLight3D".position += Vector3(100,100,100) 
 	#print(movement)
