@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdcr0cwc2c8cq" path="res://scenes/group_1.gd" id="1_kgoae"]
 [ext_resource type="Texture2D" uid="uid://dk8y1akl338rm" path="res://icon.svg" id="2_5e6e0"]
+[ext_resource type="Texture2D" uid="uid://cjy72dbyqa0l7" path="res://2d_assets/electrical_game.png" id="2_djigc"]
 [ext_resource type="Script" uid="uid://d2ukrku2v2613" path="res://scenes/electrical_game.gd" id="2_ttvqk"]
 [ext_resource type="Script" uid="uid://uvsx4alsa3bf" path="res://scenes/group_2.gd" id="4_dremj"]
 [ext_resource type="Script" uid="uid://3qy5on6cm4px" path="res://scenes/group_3.gd" id="5_4n7td"]
@@ -9,6 +10,10 @@
 
 [node name="electrical_game" type="Node2D" unique_id=257180580]
 script = ExtResource("2_ttvqk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1489417801]
+scale = Vector2(0.30029854, 0.300002)
+texture = ExtResource("2_djigc")
 
 [node name="group1" type="Node2D" parent="." unique_id=281910642]
 script = ExtResource("1_kgoae")
