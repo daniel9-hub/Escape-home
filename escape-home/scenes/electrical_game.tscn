@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cnbhtbrfmnukw"]
 
 [ext_resource type="Script" uid="uid://cdcr0cwc2c8cq" path="res://scenes/group_1.gd" id="1_kgoae"]
-[ext_resource type="Texture2D" uid="uid://dk8y1akl338rm" path="res://icon.svg" id="2_5e6e0"]
 [ext_resource type="Texture2D" uid="uid://cjy72dbyqa0l7" path="res://2d_assets/electrical_game.png" id="2_djigc"]
 [ext_resource type="Script" uid="uid://d2ukrku2v2613" path="res://scenes/electrical_game.gd" id="2_ttvqk"]
 [ext_resource type="Script" uid="uid://uvsx4alsa3bf" path="res://scenes/group_2.gd" id="4_dremj"]
@@ -19,126 +18,139 @@ texture = ExtResource("2_djigc")
 script = ExtResource("1_kgoae")
 
 [node name="dot1" type="TextureButton" parent="group1" unique_id=985907224]
-offset_left = -133.0
-offset_top = -134.0
-offset_right = -5.0
-offset_bottom = -6.0
+offset_left = -171.0
+offset_top = -131.00002
+offset_right = -43.0
+offset_bottom = -3.0000153
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
 [node name="Line2D" type="Line2D" parent="group1/dot1" unique_id=180156419]
 position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(4.6205523e-06, 0, 0.9614695, 1)
 
 [node name="dot2" type="TextureButton" parent="group1" unique_id=2093047900]
-offset_left = -11.999984
-offset_top = -135.0
-offset_right = 116.000015
-offset_bottom = -7.0
+offset_left = -27.999998
+offset_top = -130.0
+offset_right = 100.0
+offset_bottom = -2.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
-[node name="Line2D" type="Line2D" parent="group1/dot2" unique_id=2069253888]
-position = Vector2(-0.00010279606, 1.5258792e-06)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="dot22" type="TextureButton" parent="group1" unique_id=1942645675]
+offset_left = 11.999994
+offset_top = -130.0
+offset_right = 140.0
+offset_bottom = -2.0
+scale = Vector2(0.1484375, 0.15624999)
+
+[node name="Line2D" type="Line2D" parent="group1/dot22" unique_id=2069253888]
+position = Vector2(-0.00021362305, 0)
+scale = Vector2(0.99999976, 0.9999997)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(0, 0, 0.9607843, 1)
 
 [node name="dot3" type="TextureButton" parent="group1" unique_id=1331831337]
-offset_left = 112.000015
-offset_top = -134.0
-offset_right = 240.00002
-offset_bottom = -6.0
+offset_left = 157.00002
+offset_top = 113.99999
+offset_right = 285.0
+offset_bottom = 242.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
 [node name="group2" type="Node2D" parent="." unique_id=998374969]
 script = ExtResource("4_dremj")
 
 [node name="dot1" type="TextureButton" parent="group2" unique_id=1068960772]
-offset_left = -132.00002
-offset_top = -59.0
-offset_right = -4.0000153
-offset_bottom = 69.0
+offset_left = -169.0
+offset_top = -53.0
+offset_right = -41.0
+offset_bottom = 75.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
 [node name="Line2D" type="Line2D" parent="group2/dot1" unique_id=32187648]
 position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="dot2" type="TextureButton" parent="group2" unique_id=1485731732]
-offset_left = -14.000031
-offset_top = -57.000008
-offset_right = 113.99997
-offset_bottom = 70.99999
+offset_left = -26.0
+offset_top = -52.0
+offset_right = 102.0
+offset_bottom = 76.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
-[node name="Line2D" type="Line2D" parent="group2/dot2" unique_id=1395227701]
-position = Vector2(-0.00010279606, 1.5258792e-06)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="dot22" type="TextureButton" parent="group2" unique_id=1299087422]
+offset_left = 8.999996
+offset_top = -52.0
+offset_right = 137.0
+offset_bottom = 76.0
+scale = Vector2(0.1484375, 0.15624999)
+
+[node name="Line2D" type="Line2D" parent="group2/dot22" unique_id=1395227701]
+position = Vector2(-0.00010681152, 0)
+scale = Vector2(0.99999976, 0.9999997)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group2" unique_id=1858710792]
-offset_left = 112.99997
-offset_top = -56.000008
-offset_right = 240.99997
-offset_bottom = 71.99999
+offset_left = 157.0
+offset_top = 33.0
+offset_right = 285.0
+offset_bottom = 161.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 
 [node name="group3" type="Node2D" parent="." unique_id=806109685]
 script = ExtResource("5_4n7td")
 
 [node name="dot1" type="TextureButton" parent="group3" unique_id=458818457]
-offset_left = -135.0
-offset_top = 28.000006
-offset_right = -7.0
-offset_bottom = 156.0
+offset_left = -166.00002
+offset_top = 31.0
+offset_right = -38.000015
+offset_bottom = 159.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="group3/dot1" unique_id=262382011]
 position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(0.8564939, 3.657937e-06, 8.663535e-07, 1)
 
 [node name="dot2" type="TextureButton" parent="group3" unique_id=673040181]
-offset_left = -10.999985
-offset_top = 28.999998
-offset_right = 117.000015
-offset_bottom = 157.0
+offset_left = -26.999998
+offset_top = 112.0
+offset_right = 101.0
+offset_bottom = 240.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
-[node name="Line2D" type="Line2D" parent="group3/dot2" unique_id=363063024]
-position = Vector2(-0.00010279606, 1.5258792e-06)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="dot22" type="TextureButton" parent="group3" unique_id=1105986877]
+offset_left = 10.999998
+offset_top = 111.0
+offset_right = 139.0
+offset_bottom = 239.0
+scale = Vector2(0.1484375, 0.15624999)
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2D" type="Line2D" parent="group3/dot22" unique_id=363063024]
+position = Vector2(-0.00030899048, -6.1035156e-05)
+scale = Vector2(0.99999976, 0.9999997)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(0.85490197, 0, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group3" unique_id=1734125603]
-offset_left = 116.000015
-offset_top = 27.999998
-offset_right = 244.00002
-offset_bottom = 156.0
+offset_left = 156.0
+offset_top = -131.0
+offset_right = 284.0
+offset_bottom = -3.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=520512810]
@@ -148,55 +160,64 @@ zoom = Vector2(2, 2)
 script = ExtResource("6_xwlxu")
 
 [node name="dot1" type="TextureButton" parent="group4" unique_id=1456320117]
-offset_left = -135.0
-offset_top = 106.0
-offset_right = -7.0
-offset_bottom = 234.0
+offset_left = -168.00002
+offset_top = 111.99999
+offset_right = -40.000015
+offset_bottom = 240.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="group4/dot1" unique_id=1049430781]
 position = Vector2(-0.00010279606, 1.5258792e-06)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(1, 1, 0, 1)
 
 [node name="dot2" type="TextureButton" parent="group4" unique_id=1008897788]
-offset_left = -10.999985
-offset_top = 108.0
-offset_right = 117.000015
-offset_bottom = 236.0
+offset_left = -26.999998
+offset_top = 32.0
+offset_right = 101.0
+offset_bottom = 160.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
-[node name="Line2D" type="Line2D" parent="group4/dot2" unique_id=33850226]
-position = Vector2(-0.00010279606, 1.5258792e-06)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="dot22" type="TextureButton" parent="group4" unique_id=543806923]
+offset_left = 9.999998
+offset_top = 33.0
+offset_right = 138.0
+offset_bottom = 161.0
+scale = Vector2(0.1484375, 0.15624999)
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2D" type="Line2D" parent="group4/dot22" unique_id=33850226]
+position = Vector2(-0.00010681152, 0)
+scale = Vector2(0.99999976, 0.9999997)
 points = PackedVector2Array(67.368286, 64.000015)
-width = 30.0
+width = 60.0
 default_color = Color(1, 1, 0, 1)
 
 [node name="dot3" type="TextureButton" parent="group4" unique_id=1904853372]
-offset_left = 116.00001
-offset_top = 107.99999
-offset_right = 244.0
-offset_bottom = 236.0
+offset_left = 156.0
+offset_top = -52.0
+offset_right = 284.0
+offset_bottom = 76.0
 scale = Vector2(0.1484375, 0.15624999)
-texture_normal = ExtResource("2_5e6e0")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="group1/dot1" to="group1" method="_on_dot_1_pressed"]
 [connection signal="pressed" from="group1/dot2" to="group1" method="_on_dot_2_pressed"]
+[connection signal="pressed" from="group1/dot22" to="group1" method="_on_dot_2_pressed"]
 [connection signal="pressed" from="group1/dot3" to="group1" method="_on_dot_3_pressed"]
 [connection signal="pressed" from="group2/dot1" to="group2" method="_on_dot_1_pressed"]
 [connection signal="pressed" from="group2/dot2" to="group2" method="_on_dot_2_pressed"]
+[connection signal="pressed" from="group2/dot22" to="group2" method="_on_dot_2_pressed"]
 [connection signal="pressed" from="group2/dot3" to="group2" method="_on_dot_3_pressed"]
 [connection signal="pressed" from="group3/dot1" to="group3" method="_on_dot_1_pressed"]
 [connection signal="pressed" from="group3/dot2" to="group3" method="_on_dot_2_pressed"]
+[connection signal="pressed" from="group3/dot22" to="group3" method="_on_dot_2_pressed"]
 [connection signal="pressed" from="group3/dot3" to="group3" method="_on_dot_3_pressed"]
 [connection signal="pressed" from="group4/dot1" to="group4" method="_on_dot_1_pressed"]
 [connection signal="pressed" from="group4/dot2" to="group4" method="_on_dot_2_pressed"]
+[connection signal="pressed" from="group4/dot22" to="group4" method="_on_dot_2_pressed"]
 [connection signal="pressed" from="group4/dot3" to="group4" method="_on_dot_3_pressed"]

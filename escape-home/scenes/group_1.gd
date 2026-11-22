@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 			dot3_pressed = false
 			dot3_pressed = false
 	if dot2_pressed:
-		$dot2/Line2D.set_point_position(1,$dot2/Line2D.to_local(get_global_mouse_position()))
+		$dot22/Line2D.set_point_position(1,$dot22/Line2D.to_local(get_global_mouse_position()))
 
 
 func _on_dot_1_pressed() -> void:
@@ -35,7 +35,7 @@ func _on_dot_2_pressed() -> void:
 			dot2_pressed = true
 			dot1_pressed = false
 			dot1 = true
-			$dot2/Line2D.add_point($dot2/Line2D.to_local(get_global_mouse_position()))
+			$dot22/Line2D.add_point($dot22/Line2D.to_local(get_global_mouse_position()))
 
 
 func _on_dot_3_pressed() -> void:
