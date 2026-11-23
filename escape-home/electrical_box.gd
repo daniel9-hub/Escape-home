@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 		$door.visible = false
 		$door2.visible = true
 		if active == true:
-			$"../electrical_game".show()
-			$"..".hide()
+			$"../electrical_game".visible = true
+			$"..".visible = false
 			$"..".process_mode = Node.PROCESS_MODE_ALWAYS
 			$"../electrical_game".process_mode = Node.PROCESS_MODE_INHERIT
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
