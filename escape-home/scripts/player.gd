@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(event:InputEvent) -> void:
-	if event is InputEventMouseButton and bookstand1.active == false:
+	if event is InputEventMouseButton and bookstand1.active == false and electrical_box.active == false:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	elif event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -119,7 +119,7 @@ func _process(_delta: float) -> void:
 						else:
 							electrical_box.door_open = true
 					elif electrical_box.door_open == true:
-						get_tree().change_scene_to_file("res://scenes/electrical_game.tscn")
+						electrical_box.active = true
 						Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 						print("box")
 	if $neck/RayCast3D.is_colliding():

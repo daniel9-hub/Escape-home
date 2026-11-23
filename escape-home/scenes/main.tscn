@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://82dalrinq7v3" path="res://scripts/secret_wall.gd" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://scenes/bookstand1.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://cgdpnobf6jvbv" path="res://electrical_box.tscn" id="15_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://cnbhtbrfmnukw" path="res://scenes/electrical_game.tscn" id="16_jbj1t"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
 size = Vector3(8.1875, 1, 10.453674)
@@ -176,3 +177,7 @@ transform = Transform3D(-0.76604426, -0.6427874, 8.742278e-08, -0.6427874, 0.766
 
 [node name="electrical_box" parent="." unique_id=72926335 instance=ExtResource("15_jkv2x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.525566, 0.8850965, 2.7788892)
+
+[node name="electrical_game" parent="." unique_id=257180580 instance=ExtResource("16_jbj1t")]
+visible = false
+position = Vector2(288, 163)

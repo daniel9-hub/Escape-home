@@ -8,4 +8,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if $group1.dot3_pressed == true:
+		if $group2.dot3_pressed == true:
+			if $group3.dot3_pressed == true:
+				if $group4.dot3_pressed == true:
+					$"../OmniLight3D".position -= Vector3(100,100,100)
+					$".".hide()
+					$"..".show()
+					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+					$group4.dot3_pressed == false
+					
