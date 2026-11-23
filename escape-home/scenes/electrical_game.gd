@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 			if $group2.dot3_pressed == true:
 				if $group3.dot3_pressed == true:
 					if $group4.dot3_pressed == true:
-						$"../OmniLight3D".position -= Vector3(100,100,100)
+						$"../OmniLight3D".position += Vector3(-100,-100,-100)
 						$".".visible = false
 						$"..".visible = true
 						completed = true
