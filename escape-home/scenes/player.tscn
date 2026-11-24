@@ -14,6 +14,8 @@ height = 1.8012695
 size = Vector3(1, 1, 1.2)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1259971802]
+platform_on_leave = 2
+safe_margin = 0.04
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=456970908]

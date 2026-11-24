@@ -1,0 +1,12 @@
+# Blender 5.2.3 LTS MTL File: 'table.blend'
+# www.blender.org
+
+newmtl Material
+Ns 250.000000
+Ka 0.200353 0.200353 0.200353
+Kd 0.131280 0.041202 0.006729
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3

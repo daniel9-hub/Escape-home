@@ -16,10 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://dy5uwnv6hukfc" path="res://scenes/bookstand1.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://cgdpnobf6jvbv" path="res://electrical_box.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://cnbhtbrfmnukw" path="res://scenes/electrical_game.tscn" id="16_jbj1t"]
+[ext_resource type="ArrayMesh" uid="uid://c7yco71g4ftgu" path="res://meshes/table.obj" id="17_muem4"]
+[ext_resource type="Texture2D" uid="uid://b544eu632ty72" path="res://meshes/table_texture.png" id="18_dp3eg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbj1t"]
 sky_top_color = Color(0.026517063, 0.020626055, 0.16439366, 1)
 sky_horizon_color = Color(0.25468403, 1.2318465e-06, 0.011279694, 1)
+sky_energy_multiplier = 0.0
 sky_cover_modulate = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0.0032359206, 0.0972717, 0, 1)
 ground_horizon_color = Color(0, 0.20032832, 0.0011889017, 1)
@@ -56,6 +59,12 @@ albedo_color = Color(0.58431375, 0.58431375, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
 size = Vector3(2, 2.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rglvs"]
+albedo_texture = ExtResource("18_dp3eg")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dp3eg"]
+size = Vector3(1, 0.41209897, 1.5)
 
 [node name="Node3D" type="Node3D" unique_id=2043496046]
 
@@ -142,18 +151,26 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1927896783]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9282475, 1.7019653, -3.9348867)
+omni_range = 10.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D" unique_id=651364313]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.024216, -0.0032348633, 2.20667)
+omni_range = 10.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D/OmniLight3D" unique_id=2002552935]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98189163, -0.0032348633, 5.5167)
+omni_range = 10.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D/OmniLight3D/OmniLight3D" unique_id=1060196164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7294064, -0.0032348633, 0.31250048)
+omni_range = 10.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D/OmniLight3D/OmniLight3D/OmniLight3D" unique_id=1477657036]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.125996, -0.30565357, -14.449738)
+visible = false
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="OmniLight3D/OmniLight3D/OmniLight3D/OmniLight3D" unique_id=1418779359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.923708, -0.93891907, -5.184932)
 
 [node name="lever" parent="." unique_id=1108222364 instance=ExtResource("9_85g3d")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.827786, 1.1861124, -2.2243862)
@@ -199,3 +216,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.525566, 0.8850965, 2.77888
 [node name="electrical_game" parent="." unique_id=257180580 instance=ExtResource("16_jbj1t")]
 visible = false
 position = Vector2(288, 163)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=2006196080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3020749, 0.1229355, -0.96826243)
+collision_layer = 2
+mass = 10.0
+continuous_cd = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1294556206]
+mesh = ExtResource("17_muem4")
+surface_material_override/0 = SubResource("StandardMaterial3D_rglvs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=827861234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1910495, 0)
+shape = SubResource("BoxShape3D_dp3eg")
