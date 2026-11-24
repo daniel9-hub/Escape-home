@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://scenes/player.tscn" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://scenes/house.tscn" id="2_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://ddqfu7jh4n5sb" path="res://blender-and-glb-files/flashlight.blend" id="3_0ld40"]
 [ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://scenes/couch.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://scenes/book1.tscn" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://scenes/bookshelf.tscn" id="5_choun"]
@@ -229,3 +230,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rglvs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=827861234]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11565472, 0)
 shape = SubResource("BoxShape3D_dp3eg")
+
+[node name="flashlight" parent="." unique_id=1343261551 instance=ExtResource("3_0ld40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53685284, 0.2381705)
