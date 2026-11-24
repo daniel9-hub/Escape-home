@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d2cd4rquvffcu"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt0vr8gkcfgug" path="res://meshes/flashlight.obj" id="1_lkaa1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ywi5"]
+size = Vector3(0.046374, 0.046374, 0.133057)
+
+[node name="flashlight" type="RigidBody3D" unique_id=1675790104]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=318237708]
+mesh = ExtResource("1_lkaa1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1876986158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.016528498)
+shape = SubResource("BoxShape3D_0ywi5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1198349123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.23665522)
