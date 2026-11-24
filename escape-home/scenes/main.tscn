@@ -20,9 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://b544eu632ty72" path="res://meshes/table_texture.png" id="18_dp3eg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbj1t"]
-sky_top_color = Color(0.026517063, 0.020626055, 0.16439366, 1)
-sky_horizon_color = Color(0.25468403, 1.2318465e-06, 0.011279694, 1)
-sky_energy_multiplier = 0.0
+sky_top_color = Color(0.0052249613, 0.003483751, 0.048530936, 1)
+sky_horizon_color = Color(0.14324185, 7.1444084e-08, 0.006128287, 1)
 sky_cover_modulate = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0.0032359206, 0.0972717, 0, 1)
 ground_horizon_color = Color(0, 0.20032832, 0.0011889017, 1)
@@ -64,7 +63,7 @@ size = Vector3(2, 2.3, 0.3)
 albedo_texture = ExtResource("18_dp3eg")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dp3eg"]
-size = Vector3(1, 0.41209897, 1.5)
+size = Vector3(1, 1.0255075, 1.5)
 
 [node name="Node3D" type="Node3D" unique_id=2043496046]
 
@@ -228,5 +227,5 @@ mesh = ExtResource("17_muem4")
 surface_material_override/0 = SubResource("StandardMaterial3D_rglvs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=827861234]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1910495, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11565472, 0)
 shape = SubResource("BoxShape3D_dp3eg")
