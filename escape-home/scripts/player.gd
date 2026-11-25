@@ -21,11 +21,13 @@ const JUMP_VELOCITY = 4.5
 @onready var key_picture_staticbody = get_tree().current_scene.get_node("bookshelf/key_picture/key_picture_staticbody")
 @onready var key_picture = get_tree().current_scene.get_node("bookshelf/key_picture")
 @onready var electrical_box = get_tree().current_scene.get_node("electrical_box")
+@onready var flashlight = get_tree().current_scene.get_node("flashlight")
 var l1 = false
 var l2 = false
 var l3 = false
 var l4 = false
 var torch_combination_correct = false
+var interactable_objects = []
 func _on_ready():
 	$neck/Camera3D.make_current()
 func _physics_process(delta: float) -> void:
@@ -122,6 +124,15 @@ func _process(_delta: float) -> void:
 						electrical_box.active = true
 						Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 						print("box")
+			elif close_object == flashlight:
+				#close_object.scale = Vector3(1.5,1.5,1.5)
+				print("scaling")
+				if Input.is_action_just_pressed("interact"):
+					print("flashlight")
+					flashlight.visible = false
+					$neck/flashlight.visible = true
+			else:
+				close_object.scale = Vector3(1,1,1)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
