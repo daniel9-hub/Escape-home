@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://b1yukjul3r08a" path="res://scenes/player.tscn" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cff3uumwsjxy5" path="res://scenes/house.tscn" id="2_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://ddqfu7jh4n5sb" path="res://blender-and-glb-files/flashlight.blend" id="3_0ld40"]
 [ext_resource type="PackedScene" uid="uid://j4na5hxn6qpi" path="res://scenes/couch.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://dn75sb16c8xe0" path="res://scenes/book1.tscn" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cm4gjatb4h206" path="res://scenes/bookshelf.tscn" id="5_choun"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cnbhtbrfmnukw" path="res://scenes/electrical_game.tscn" id="16_jbj1t"]
 [ext_resource type="ArrayMesh" uid="uid://c7yco71g4ftgu" path="res://meshes/table.obj" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://b544eu632ty72" path="res://meshes/table_texture.png" id="18_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://dy2rxw7arfpc2" path="res://flashlight.tscn" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbj1t"]
 sky_top_color = Color(0.0052249613, 0.003483751, 0.048530936, 1)
@@ -231,5 +231,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rglvs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11565472, 0)
 shape = SubResource("BoxShape3D_dp3eg")
 
-[node name="flashlight" parent="." unique_id=1343261551 instance=ExtResource("3_0ld40")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53685284, 0.2381705)
+[node name="flashlight" parent="." unique_id=1416407502 instance=ExtResource("19_0ld40")]
