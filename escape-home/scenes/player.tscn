@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1yukjul3r08a"]
 
 [ext_resource type="Script" uid="uid://1ypqtxdohqw7" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dy2rxw7arfpc2" path="res://flashlight.tscn" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bx3dq"]
 radius = 0.35
@@ -37,3 +38,7 @@ target_position = Vector3(0, 0, -2)
 [node name="ShapeCast3D" type="ShapeCast3D" parent="neck" unique_id=461721505]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.4)
 shape = SubResource("BoxShape3D_tugg1")
+
+[node name="flashlight" parent="neck" unique_id=1416407502 instance=ExtResource("2_g2els")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.4369812, 0, -0.5817871)
+freeze = true
