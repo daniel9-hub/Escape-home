@@ -153,7 +153,8 @@ func _process(_delta: float) -> void:
 					flashlight.visible = false
 					$neck/flashlight.visible = true
 			if close_object in interactable_objects:
-				close_object.scale = Vector3(1.1,1.1,1.1)
+				#close_object.scale = Vector3(1.1,1.1,1.1)
+				pass
 			#else:
 				#close_object.scale = Vector3(1,1,1)
 	if $neck/RayCast3D.is_colliding():
