@@ -231,7 +231,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rglvs")
 shape = SubResource("ConvexPolygonShape3D_0ld40")
 
 [node name="flashlight" parent="." unique_id=1416407502 instance=ExtResource("19_0ld40")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27454764, -1.6128297)
-collision_layer = 0
-collision_mask = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27454764, -0.7209528)
+collision_layer = 2
+collision_mask = 2
 freeze_mode = 0

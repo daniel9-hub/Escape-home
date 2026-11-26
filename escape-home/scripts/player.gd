@@ -47,7 +47,7 @@ func _ready():
 		key_picture_staticbody,
 		key_picture,
 		electrical_box,
-		flashlight
+		#flashlight
 	]
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
