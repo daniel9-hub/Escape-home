@@ -28,8 +28,27 @@ var l3 = false
 var l4 = false
 var torch_combination_correct = false
 var interactable_objects = []
-func _on_ready():
+func _ready():
 	$neck/Camera3D.make_current()
+	interactable_objects = [
+		couch,
+		book1,
+		bookshelf,
+		bookshelf_book1,
+		lever,
+		lever2,
+		lever3,
+		lever4,
+		torch1,
+		torch2,
+		torch3,
+		Secret_wall,
+		bookstand1,
+		key_picture_staticbody,
+		key_picture,
+		electrical_box,
+		flashlight
+	]
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -69,6 +88,8 @@ func _input(event:InputEvent) -> void:
 				neck.rotation_degrees.x = -90
 				
 func _process(_delta: float) -> void:
+	for obj in interactable_objects:
+		obj.scale = Vector3.ONE
 	if $neck/ShapeCast3D.is_colliding():
 		for i in range($neck/ShapeCast3D.get_collision_count()):
 			var close_object = $neck/ShapeCast3D.get_collider(i)
@@ -131,8 +152,10 @@ func _process(_delta: float) -> void:
 					print("flashlight")
 					flashlight.visible = false
 					$neck/flashlight.visible = true
-			else:
-				close_object.scale = Vector3(1,1,1)
+			if close_object in interactable_objects:
+				close_object.scale = Vector3(1.1,1.1,1.1)
+			#else:
+				#close_object.scale = Vector3(1,1,1)
 	if $neck/RayCast3D.is_colliding():
 		var raycast_close_object = $neck/RayCast3D.get_collider()
 		if raycast_close_object == lever:
